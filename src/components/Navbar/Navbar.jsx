@@ -1,18 +1,19 @@
 import React from "react";
-import './Navbar.scss'
+import "./Navbar.scss";
 import { Link } from "react-scroll/modules";
+import Button from "@mui/material/Button";
 
 const Navbar = () => {
   return (
     <div className="navbar">
       {/* left */}
-      <div>
-        <span>{"<Hamza/>"}</span>
+      <div className="navbar__left">
+        <span className="navbar__logo">{"<Hamza/>"}</span>
         <div>toggle</div>
       </div>
       {/* right */}
-      <div>
-        <ul>
+      <div className="navbar__right">
+        <ul className="navbar__list">
           <li>
             <Link activeClass="active" to="home" spy={true} smooth={true}>
               Home
@@ -29,13 +30,19 @@ const Navbar = () => {
               Protfolio
             </Link>
           </li>
+          <li>
+            <Link to="contact" spy={true} smooth={true}>
+              Contact
+            </Link>
+          </li>
         </ul>
 
-        <Link to="contact" spy={true} smooth={true}>
-          <button>Contact</button>
-        </Link>
+        <Button variant="outlined">Resume</Button>
       </div>
     </div>
+
+
+
   );
 };
 

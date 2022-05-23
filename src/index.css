@@ -1,9 +1,9 @@
 html {
-  font-size: 62.5%;
+  /* font-size: 62.5%; */
 }
 body {
   margin: 0;
-  font: 400 18px/1.4 "poppins", "sans serif";
+  font-family: "poppins", "sans serif";
   color: #e6f1ff;
   background: #0a192f;
 
@@ -11,7 +11,4 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
-}
+
