@@ -2,14 +2,25 @@ import React from "react";
 import "./Navbar.scss";
 import { Link } from "react-scroll/modules";
 import Button from "@mui/material/Button";
+import Toggle from "./Toggle";
+import { useContext } from "react";
+import { themeContext } from "../../Context";
 
 const Navbar = () => {
+  const theme = useContext(themeContext);
+  const darkMode = theme.state.darkMode;
   return (
-    <div className="navbar">
+    <div
+      className="navbar"
+      style={{
+        background: darkMode ? "#0a192fcc" : "#e6f1ffcc",
+        color: darkMode ? "#e6f1ff" : "#0a192f",
+      }}
+    >
       {/* left */}
       <div className="navbar__left">
         <span className="navbar__logo">{"<Hamza/>"}</span>
-        <div>toggle</div>
+        <Toggle />
       </div>
       {/* right */}
       <div className="navbar__right">
@@ -40,9 +51,6 @@ const Navbar = () => {
         <Button variant="outlined">Resume</Button>
       </div>
     </div>
-
-
-
   );
 };
 

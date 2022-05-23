@@ -1,10 +1,12 @@
-$navy-clr-8: rgba(10, 25, 47, 0.8);
-$green-clr: #1976d2;
+$navy-clr-8: hsla(216, 65%, 11%, 0.8);
+$blue-clr: #1e88e5;
+$bg-white-8: #eeeeeecc;
 .navbar {
   display: flex;
   position: sticky;
   top: 0;
   background-color: $navy-clr-8;
+
   margin-bottom: 2rem;
   height: 12vh;
   justify-content: center;
@@ -30,10 +32,10 @@ $green-clr: #1976d2;
     font-size: 1.3rem;
     font-weight: bold;
     &:hover {
-      color: $green-clr;
+      color: $blue-clr;
       cursor: pointer;
-      transition: all 0.3s ease-out;
-      transform: rotateZ('30');
+      transition: all 0.2s ease-in-out;
+      transform: rotateZ("30");
     }
   }
   &__list {
@@ -43,9 +45,29 @@ $green-clr: #1976d2;
     list-style: none;
 
     & > li:hover {
-      color: $green-clr;
+      color: $blue-clr;
       cursor: pointer;
       transition: all 0.3s ease-out;
     }
+  }
+}
+
+.toggle {
+  display: flex;
+  justify-content: space-between;
+  border: 3px solid $blue-clr;
+  border-radius: 1rem;
+  position: relative;
+  padding: 2px;
+  cursor: pointer;
+  & > * {
+    width: 1rem;
+    height: 1rem;
+    color: $blue-clr;
+  }
+  &__button {
+    border-radius: 100%;
+    background: $blue-clr;
+    position: absolute;
   }
 }
