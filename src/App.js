@@ -12,20 +12,22 @@ function App() {
   // background: ;
   const theme = useContext(themeContext);
   const darkMode = theme.state.darkMode;
-
+  // #374E59
   return (
     <div
       className="app"
       style={{
-        background: darkMode ? "#0a192f" : "#e6f1ff",
-        color: darkMode ? "#e6f1ff" : "#0a192f",
+        background: darkMode ? "#374E59" : "#e6f1ff",
+        color: darkMode ? "#e6f1ff" : "#374E59",
       }}
     >
-      <Navbar />
-      <Home />
-      <About />
-      <Portfolio />
-      <Contact />
+      <div className="container">
+        <Navbar />
+        <Home />
+        <About />
+        <Portfolio />
+        <Contact />
+      </div>
     </div>
   );
 }

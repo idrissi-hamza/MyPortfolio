@@ -9,12 +9,13 @@ import { themeContext } from "../../Context";
 const Navbar = () => {
   const theme = useContext(themeContext);
   const darkMode = theme.state.darkMode;
+
   return (
     <div
       className="navbar"
       style={{
-        background: darkMode ? "#0a192fcc" : "#e6f1ffcc",
-        color: darkMode ? "#e6f1ff" : "#0a192f",
+        background: darkMode ? "#374E59cc" : "#e6f1ffcc",
+        color: darkMode ? "#e6f1ff" : "#374E59",
       }}
     >
       {/* left */}
@@ -48,7 +49,22 @@ const Navbar = () => {
           </li>
         </ul>
 
-        <Button variant="outlined">Resume</Button>
+        <Button
+          sx={{
+            color: "#e57373",
+            borderColor: "#e57373",
+            borderWidth:'1.4px',
+            ":hover": {
+              color: "#e57373bb",
+              borderColor: "#e57373bb",
+              borderWidth:'1.4px',
+              
+            },
+          }}
+          variant="outlined"
+        >
+          Resume
+        </Button>
       </div>
     </div>
   );
