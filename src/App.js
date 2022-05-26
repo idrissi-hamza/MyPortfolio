@@ -1,12 +1,13 @@
 import logo from "./logo.svg";
 import "./App.scss";
 import Navbar from "./components/Navbar/Navbar";
-import Portfolio from "./components/Portfolio/Portfolio";
-import Home from "./components/Home.jsx/Home";
-import Contact from "./components/Contact/Contact";
-import About from "./components/About/About";
+import Portfolio from "./routes/Portfolio/Portfolio";
+import Home from "./routes/Home.jsx/Home";
+import Contact from "./routes/Contact/Contact";
+import About from "./routes/About/About";
 import { useContext } from "react";
 import { themeContext } from "./Context";
+import { Route, Routes } from "react-router-dom";
 
 function App() {
   // background: ;
@@ -23,10 +24,12 @@ function App() {
     >
       <div className="container">
         <Navbar />
-        <Home />
-        <About />
-        <Portfolio />
-        <Contact />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="about" element={<About />} />
+          <Route path="portfolio" element={<Portfolio />} />
+          <Route path="contact" element={<Contact />} />
+        </Routes>
       </div>
     </div>
   );

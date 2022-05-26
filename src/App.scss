@@ -18,4 +18,10 @@ $bg-white: #e6f1ff;
   margin: 0 auto;
 }
 
+.navbar-item > .active {
+  color: #e57373;
+}
 
+.app {
+  min-height: 100vh;
+}
