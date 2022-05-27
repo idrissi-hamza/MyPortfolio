@@ -58,7 +58,9 @@ $bg-white-8: #eeeeeecc;
 
       &.active {
         color: $pink-clr;
-      
+        &:after {
+          width: 100%;
+        }
       }
 
       &:after {

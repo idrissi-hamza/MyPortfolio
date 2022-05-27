@@ -18,11 +18,6 @@ const Navbar = () => {
   ];
   const [linkTo, setLinkTo] = useState("");
 
-  // const NavLinks = styled(Link)`
-  //   &.active {
-  //     color: red;
-  //   }
-  // `;
 
   return (
     <div
