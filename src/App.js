@@ -2,7 +2,7 @@ import logo from "./logo.svg";
 import "./App.scss";
 import Navbar from "./components/Navbar/Navbar";
 import Portfolio from "./routes/Portfolio/Portfolio";
-import Home from "./routes/Home.jsx/Home";
+import Home from "./routes/Home/Home";
 import Contact from "./routes/Contact/Contact";
 import About from "./routes/About/About";
 import { useContext } from "react";
@@ -22,7 +22,7 @@ function App() {
         color: darkMode ? "#e6f1ff" : "#374E59",
       }}
     >
-      <div className="container">
+      {/* <div className="container"> */}
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
@@ -30,7 +30,8 @@ function App() {
           <Route path="portfolio" element={<Portfolio />} />
           <Route path="contact" element={<Contact />} />
         </Routes>
-      </div>
+      {/* </div> */}
+     
     </div>
   );
 }

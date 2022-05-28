@@ -9,7 +9,9 @@ $bg-white-8: #eeeeeecc;
 
   height: 12vh;
   justify-content: center;
+  margin-bottom: 10px;
 
+  z-index: 10;
   &__left {
     flex: 1;
     align-items: center;
@@ -18,17 +20,17 @@ $bg-white-8: #eeeeeecc;
     gap: 2rem;
   }
 
-  &__logo {
-    font-family: "Water Brush", cursive;
-    font-size: 1.3rem;
-    font-weight: bold;
-    &:hover {
-      color: $pink-clr;
-      cursor: pointer;
-      transition: all 0.2s ease-in-out;
-      transform: rotateZ("30");
-    }
-  }
+  // &__logo {
+  //   font-family: "Water Brush", cursive;
+  //   font-size: 1.3rem;
+  //   font-weight: bold;
+  //   &:hover {
+  //     color: $pink-clr;
+  //     cursor: pointer;
+  //     transition: all 0.2s ease-in-out;
+  //     transform: rotateZ("30");
+  //   }
+  // }
 
   &__right {
     display: flex;
@@ -85,6 +87,8 @@ $bg-white-8: #eeeeeecc;
 }
 
 .toggle {
+  margin-left: 1rem;
+  rotate: 90deg;
   display: flex;
   justify-content: space-between;
   border: 1.5px solid $pink-clr;
@@ -96,6 +100,7 @@ $bg-white-8: #eeeeeecc;
     width: 1rem;
     height: 1rem;
     color: $pink-clr;
+    rotate: -90deg;
   }
   &__button {
     border-radius: 100%;
