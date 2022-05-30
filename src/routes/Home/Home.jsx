@@ -1,6 +1,6 @@
 import React from "react";
 import "./Home.scss";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import Button from "@mui/material/Button";
 
 import Circles from "../../components/Navbar/Circles";
@@ -8,10 +8,9 @@ import Circles from "../../components/Navbar/Circles";
 const Home = () => {
   let navigate = useNavigate();
 
-
   return (
     <div className="home ">
-      <div className="container wrapper ">
+      <div className=" wrapper ">
         <p>Hi, my name is :</p>
         <h1>
           <span>Hamza A.Idrissi</span>
@@ -22,7 +21,6 @@ const Home = () => {
           I build (and occasionally) design exceptional digital experiences.
         </h3>
 
-        {/* <Link to="/contact" className="flat-button"> */}
         <Button
           onClick={() => navigate("/contact")}
           sx={{
@@ -40,7 +38,6 @@ const Home = () => {
         >
           Contact me
         </Button>
-        {/* </Link> */}
       </div>
       <Circles />
     </div>

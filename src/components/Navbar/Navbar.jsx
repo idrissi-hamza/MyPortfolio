@@ -1,6 +1,5 @@
-import React, { useState } from "react";
+import React from "react";
 import "./Navbar.scss";
-import { Link } from "react-scroll/modules";
 import Button from "@mui/material/Button";
 import Toggle from "./Toggle";
 import { useContext } from "react";
@@ -16,7 +15,6 @@ const Navbar = () => {
     { label: "Portfolio", id: "portfolio" },
     { label: "Contact", id: "contact" },
   ];
-  const [linkTo, setLinkTo] = useState("");
 
   return (
     <div
