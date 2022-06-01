@@ -2,46 +2,47 @@ $navy-clr-8: hsla(216, 65%, 11%, 0.8);
 $pink-clr: #e57373;
 $bg-white-8: #eeeeeecc;
 .navbar {
-  display: flex;
+  // display: flex;
+  padding-inline: 2rem;
   position: sticky;
-  top: 0;
-  background-color: $navy-clr-8;
-
+  top: 0px;
   height: 12vh;
   justify-content: center;
   margin-bottom: 10px;
-
   z-index: 10;
+  padding-top: 10px;
+  &-container {
+    display: flex;
+    margin: 0 auto;
+    max-width: 1020px;
+    align-items: center;
+  }
   &__left {
     flex: 1;
     align-items: center;
     justify-content: left;
     display: flex;
-    gap: 2rem;
+    // background: #000;
+    // gap: 2rem;
+    // margin-right: auto;
   }
 
-  // &__logo {
-  //   font-family: "Water Brush", cursive;
-  //   font-size: 1.3rem;
-  //   font-weight: bold;
-  //   &:hover {
-  //     color: $pink-clr;
-  //     cursor: pointer;
-  //     transition: all 0.2s ease-in-out;
-  //     transform: rotateZ("30");
-  //   }
-  // }
+  &__logo {
+    font-family: "Water Brush", cursive;
+    font-size: 1.3rem;
+    font-weight: bold;
 
-  &__right {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    font-weight: 400;
-    flex: 1;
+    &:hover {
+      color: $pink-clr;
+      cursor: pointer;
+      transition: all 0.2s ease-in-out;
+      transform: rotateZ("30");
+    }
   }
+
   &__list {
     display: flex;
-    margin-right: 2rem;
+    // margin-right: 2rem;
     list-style: none;
     cursor: pointer;
     gap: 2rem;
@@ -86,16 +87,52 @@ $bg-white-8: #eeeeeecc;
   }
 }
 
-// @media (max-width: 680px) {
-//   .navbar {
-//     display: none;
-//   }
-// }
+@media (max-width: 680px) {
+  .navbar {
+    z-index: 12;
+    &__right {
+      position: fixed;
+      inset: 0 0 0 30%;
+      // flex-direction: column;
+      padding-top: 30px;
+
+      background: hsla(0, 0%, 100%, 0.1);
+      z-index: 30;
+    }
+    &__list {
+      gap: 3rem;
+      // font-size: larger;
+      flex-direction: column;
+      margin-left: 0px;
+      // background: #000;
+      position: absolute;
+      left: 30%;
+      & :last-child {
+        margin-top: 3rem;
+      }
+    }
+  }
+
+  .background {
+    filter: blur(4px);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 11;
+    // background: #e57373;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar__list {
+    left: 10%;
+  }
+}
 
 //toggle scss
 .toggle {
   margin-left: 1rem;
-  rotate: 90deg;
+  // rotate: 90deg;
   display: flex;
   justify-content: space-between;
   border: 1.5px solid $pink-clr;
@@ -107,7 +144,7 @@ $bg-white-8: #eeeeeecc;
     width: 1rem;
     height: 1rem;
     color: $pink-clr;
-    rotate: -90deg;
+    // rotate: -90deg;
   }
   &__button {
     border-radius: 100%;

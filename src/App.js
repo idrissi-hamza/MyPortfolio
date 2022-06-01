@@ -23,6 +23,7 @@ function App() {
       }}
     >
       {/* <div className="container"> */}
+      {/* <div className="background"/> */}
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />

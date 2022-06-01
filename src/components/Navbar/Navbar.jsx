@@ -18,17 +18,19 @@ const Navbar = () => {
 
   return (
     <div
-      className="navbar  "
+      className="navbar   "
       style={{
         background: darkMode ? "#374E59cc" : "#e6f1ffcc",
         color: darkMode ? "#e6f1ff" : "#374E59",
       }}
     >
-      {/* left */}
-      <div className="container ">
+      <div className="navbar-container">
+        {/* left */}
         <div className="navbar__left">
-          {/* <span className="navbar__logo">{"<Hamza/>"}</span> */}
+          <span className="navbar__logo">{"<H/A>"}</span>
+          {/* <Toggle /> */}
         </div>
+
         {/* right */}
         <nav className="navbar__right">
           <ul className="navbar__list">
@@ -42,26 +44,23 @@ const Navbar = () => {
                 </NavLink>
               </li>
             ))}
-          </ul>
-
-          <Button
-            sx={{
-              
-              color: "#e57373",
-              borderColor: "#e57373",
-              borderWidth: "1.4px",
-              ":hover": {
-                color: "#e57373bb",
-                borderColor: "#e57373bb",
+            <Button
+              sx={{
+                color: "#e57373",
+                borderColor: "#e57373",
                 borderWidth: "1.4px",
-                background: "#e5737313",
-              },
-            }}
-            variant="outlined"
-          >
-            Resume
-          </Button>
-          <Toggle />
+                ":hover": {
+                  color: "#e57373bb",
+                  borderColor: "#e57373bb",
+                  borderWidth: "1.4px",
+                  background: "#e5737313",
+                },
+              }}
+              variant="outlined"
+            >
+              Resume
+            </Button>
+          </ul>
         </nav>
       </div>
     </div>

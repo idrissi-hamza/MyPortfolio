@@ -10,7 +10,7 @@ const Home = () => {
 
   return (
     <div className="home ">
-      <div className=" wrapper ">
+      <div className=" home-container wrapper ">
         <p>Hi, my name is :</p>
         <h1>
           <span>Hamza A.Idrissi</span>
