@@ -7,9 +7,7 @@ export const MenuButton = () => {
   const context = useContext(globalContext);
   const { open } = context.state;
   const clickHandler = () => {
-    // console.log("clicked");
     context.dispatch({ type: "menu" });
-    console.log(open);
   };
   return (
     <div onClick={clickHandler} className={`menu-btn ${open ? "open" : ""}`}>

@@ -1,6 +1,6 @@
 $w: 30px;
 $e: 3px;
-$space:10px;
+$space: 10px;
 .menu-btn {
   position: absolute;
   display: flex;
@@ -10,17 +10,20 @@ $space:10px;
   aspect-ratio: 1;
   cursor: pointer;
   transition: all 0.5s ease-in-out;
-  /* border: 3px solid #fff; */
-  top: 1rem;
+  top: 1.5rem;
   right: 2rem;
   z-index: 9999;
+}
+@media (min-width: 680px) {
+  .menu-btn {
+    display: none;
+  }
 }
 .menu-btn__burger {
   width: $w;
   height: $e;
   background: #fff;
   border-radius: 5px;
-  // box-shadow: 0 2px 5px rgba(255,101,47,.2);
   transition: all 0.5s ease-in-out;
 }
 .menu-btn__burger::before,
@@ -31,7 +34,6 @@ $space:10px;
   height: $e;
   background: #fff;
   border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
   transition: all 0.5s ease-in-out;
 }
 .menu-btn__burger::before {
@@ -42,13 +44,13 @@ $space:10px;
 }
 /* ANIMATION */
 .menu-btn.open .menu-btn__burger {
-  transform: translateX(-50px);
+  transform: translateX(-5px);
   background: transparent;
   // box-shadow: none;
 }
 .menu-btn.open .menu-btn__burger::before {
-  transform: rotate(45deg) translate(35px, -35px);
+  transform: rotate(45deg) translate(3px, -3px);
 }
 .menu-btn.open .menu-btn__burger::after {
-  transform: rotate(-45deg) translate(35px, 35px);
+  transform: rotate(-45deg) translate(3px, 3px);
 }

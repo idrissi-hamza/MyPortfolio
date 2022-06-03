@@ -1,7 +1,7 @@
 import React from "react";
 import "./Navbar.scss";
 import Button from "@mui/material/Button";
-import Toggle from "./Toggle";
+// import Toggle from "./Toggle";
 import { useContext } from "react";
 import { globalContext } from "../../Context";
 import { NavLink } from "react-router-dom";
@@ -9,7 +9,7 @@ import { MenuButton } from "./MenuButton";
 
 const Navbar = () => {
   const context = useContext(globalContext);
-  const darkMode = context.state.darkMode;
+  const { darkMode, open } = context.state;
   const links = [
     { label: "Home", id: "/" },
     { label: "About", id: "about" },
@@ -31,11 +31,11 @@ const Navbar = () => {
         {/* left */}
         <div className="navbar__left">
           <span className="navbar__logo">{"<H/A>"}</span>
-          <Toggle />
+          {/* <Toggle /> */}
         </div>
 
         {/* right */}
-        <nav className="navbar__right">
+        <nav className={`navbar__right  navbar-lg `}>
           <ul className="navbar__list">
             {links.map((link, i) => (
               <li key={i}>
@@ -69,6 +69,40 @@ const Navbar = () => {
             </Button>
           </ul>
         </nav>
+        {open && <nav className={`navbar__right navbar-sm `}>
+          <ul className="navbar__list">
+            {links.map((link, i) => (
+              <li key={i}>
+                <NavLink
+                  to={link.id}
+                  className={({ isActive }) => (isActive ? "active" : "")}
+                >
+                  {link.label}
+                </NavLink>
+              </li>
+            ))}
+
+            <Button
+              sx={{
+                zIndex: "40",
+
+                color: "#e57373",
+                borderColor: "#e57373",
+                borderWidth: "1.4px",
+                ":hover": {
+                  color: "#e57373bb",
+                  borderColor: "#e57373bb",
+                  borderWidth: "1.4px",
+                  background: "#e5737313",
+                },
+              }}
+              variant="outlined"
+              onClick={() => console.log("clicked")}
+            >
+              Resume
+            </Button>
+          </ul>
+        </nav>}
       </div>
     </div>
   );
