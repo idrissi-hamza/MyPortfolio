@@ -27,6 +27,8 @@ $bg-white: #e6f1ff;
   display: flex;
   flex-direction: column;
   // padding-top: 10px;
+  user-select: none;
+
 }
 
 .wrapper {

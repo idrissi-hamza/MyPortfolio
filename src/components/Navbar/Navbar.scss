@@ -36,7 +36,6 @@ $bg-white-8: #eeeeeecc;
       color: $pink-clr;
       cursor: pointer;
       transition: all 0.2s ease-in-out;
-      transform: rotateZ("30");
     }
   }
 
@@ -75,7 +74,6 @@ $bg-white-8: #eeeeeecc;
         margin: auto;
         width: 0%;
         content: "";
-        // color: transparent;
         background: $pink-clr;
         height: 1px;
       }
@@ -90,21 +88,24 @@ $bg-white-8: #eeeeeecc;
 @media (max-width: 680px) {
   .navbar {
     z-index: 12;
+    &__logo{
+      margin-top: 1.3rem;
+    }
     &__right {
+      margin-top: 1rem;
       position: fixed;
       inset: 0 0 0 30%;
       // flex-direction: column;
       padding-top: 30px;
 
-      background: hsla(0, 0%, 100%, 0.1);
+      background: rgba(55, 78, 89, 0.9);
       z-index: 30;
     }
     &__list {
-      gap: 3rem;
+      gap: 2rem;
       // font-size: larger;
       flex-direction: column;
-      margin-left: 0px;
-      // background: #000;
+      margin-left: 5px;
       position: absolute;
       left: 30%;
       & :last-child {
@@ -112,20 +113,26 @@ $bg-white-8: #eeeeeecc;
       }
     }
   }
-
+  
   .background {
-    filter: blur(4px);
+    filter: blur(5px);
+    z-index: 1;
+  }
+
+  .mobile-nav-toggle{
     position: absolute;
-    width: 100%;
-    height: 100%;
-    z-index: 11;
-    // background: #e57373;
+    z-index: 8888;
+    background:red ;
+    width: 1rem;
+    aspect-ratio: 1;
+    top: 2rem;
+    right:3rem;
   }
 }
 
 @media (max-width: 480px) {
   .navbar__list {
-    left: 10%;
+    left: 0%;
   }
 }
 

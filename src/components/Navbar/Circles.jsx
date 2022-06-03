@@ -1,11 +1,11 @@
 import React from "react";
 import "./Circles.scss"
 import { useContext } from "react";
-import { themeContext } from "../../Context";
+import { globalContext } from "../../Context";
 
 const Circles = () => {
-  const theme = useContext(themeContext);
-  const darkMode = theme.state.darkMode;
+  const context = useContext(globalContext);
+  const darkMode = context.state.darkMode;
 
   return (
     <div className="circles">

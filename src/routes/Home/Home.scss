@@ -2,10 +2,9 @@ $bubbledark: rgba(10, 24, 46, 0.1);
 $bubblewhite: rgba(255, 255, 255, 0.1);
 
 .home {
-  
   padding: 24px 0;
   font-family: "nunito";
-  &-container{
+  &-container {
     width: fit-content;
   }
   p {
