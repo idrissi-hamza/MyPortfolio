@@ -12,7 +12,7 @@ const Home = () => {
   const context = useContext(globalContext);
   const { open } = context.state;
   return (
-    <div className={`home ${open ? "background" : ""}`}>
+    <div className={`home ${open ? "background" : ""}`} onClick={() => context.dispatch({ type: "close" })}>
       <div className=" home-container wrapper ">
         <p>Hi, my name is :</p>
         <h1>
