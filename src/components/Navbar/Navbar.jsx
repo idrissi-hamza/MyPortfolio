@@ -21,7 +21,7 @@ const Navbar = () => {
     <div
       className="navbar   "
       style={{
-        background: darkMode ? "#374E59cc" : "#e6f1ffcc",
+        background: darkMode ? "hsla(199, 24%, 28%, 0.9)" : "hsla(214, 100%, 95%, 0.9)",
         color: darkMode ? "#e6f1ff" : "#374E59",
       }}
     >

@@ -1,14 +1,16 @@
 $navy-clr-8: hsla(216, 65%, 11%, 0.8);
 $pink-clr: #e57373;
 $bg-white-8: #eeeeeecc;
+$clr:hsla(214, 100%, 95%, 0.9);
 .navbar {
+  background: #eee;
   &-sm {
     display: none;
   }
   padding-inline: 2rem;
   position: sticky;
   top: 0px;
-  height: 12vh;
+  height: 4rem;
   justify-content: center;
   margin-bottom: 10px;
   z-index: 10;
@@ -16,7 +18,7 @@ $bg-white-8: #eeeeeecc;
   &-container {
     display: flex;
     margin: 0 auto;
-    max-width: 1020px;
+    max-width: 960px;
     align-items: center;
   }
   &__left {
@@ -123,15 +125,7 @@ $bg-white-8: #eeeeeecc;
     z-index: 1;
   }
 
-  .mobile-nav-toggle {
-    position: absolute;
-    z-index: 8888;
-    background: red;
-    width: 1rem;
-    aspect-ratio: 1;
-    top: 2rem;
-    right: 3rem;
-  }
+  
 }
 
 @media (max-width: 480px) {

@@ -6,6 +6,8 @@ $bubblewhite: rgba(255, 255, 255, 0.1);
   font-family: "nunito";
   &-container {
     width: fit-content;
+    max-width: 960px;
+    padding-inline: 2rem;
   }
   p {
     font-size: 1rem;

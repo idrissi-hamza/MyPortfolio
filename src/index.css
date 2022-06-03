@@ -6,7 +6,7 @@ html {
 body {
   margin: 0;
   font-family: "poppins", "sans serif";
-  /* min-height: 100vh; */
+  min-height: 100vh;
   /* height: auto; */
   /* background:  ; */
 }
