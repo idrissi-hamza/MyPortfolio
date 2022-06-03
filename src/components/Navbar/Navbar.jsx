@@ -21,7 +21,9 @@ const Navbar = () => {
     <div
       className="navbar   "
       style={{
-        background: darkMode ? "hsla(199, 24%, 28%, 0.9)" : "hsla(214, 100%, 95%, 0.9)",
+        background: darkMode
+          ? "hsla(199, 24%, 28%, 0.9)"
+          : "hsla(214, 100%, 95%, 0.9)",
         color: darkMode ? "#e6f1ff" : "#374E59",
       }}
     >
@@ -69,40 +71,44 @@ const Navbar = () => {
             </Button>
           </ul>
         </nav>
-        {open && <nav className={`navbar__right navbar-sm `}>
-          <ul className="navbar__list">
-            {links.map((link, i) => (
-              <li key={i}>
-                <NavLink
-                  to={link.id}
-                  className={({ isActive }) => (isActive ? "active" : "")}
+        {open && (
+          <nav className={`navbar__right navbar-sm `}>
+            <ul className="navbar__list">
+              {links.map((link, i) => (
+                <li
+                  key={i}
+                  onClick={() => context.dispatch({ type: "close" })}
                 >
-                  {link.label}
-                </NavLink>
-              </li>
-            ))}
+                  <NavLink
+                    to={link.id}
+                    className={({ isActive }) => (isActive ? "active" : "")}
+                  >
+                    {link.label}
+                  </NavLink>
+                </li>
+              ))}
+              <Button
+                sx={{
+                  zIndex: "40",
 
-            <Button
-              sx={{
-                zIndex: "40",
-
-                color: "#e57373",
-                borderColor: "#e57373",
-                borderWidth: "1.4px",
-                ":hover": {
-                  color: "#e57373bb",
-                  borderColor: "#e57373bb",
+                  color: "#e57373",
+                  borderColor: "#e57373",
                   borderWidth: "1.4px",
-                  background: "#e5737313",
-                },
-              }}
-              variant="outlined"
-              onClick={() => console.log("clicked")}
-            >
-              Resume
-            </Button>
-          </ul>
-        </nav>}
+                  ":hover": {
+                    color: "#e57373bb",
+                    borderColor: "#e57373bb",
+                    borderWidth: "1.4px",
+                    background: "#e5737313",
+                  },
+                }}
+                variant="outlined"
+                onClick={() => context.dispatch({ type: "close" })}
+              >
+                Resume
+              </Button>
+            </ul>
+          </nav>
+        )}
       </div>
     </div>
   );
