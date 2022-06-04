@@ -17,6 +17,8 @@ $bg-white: #e6f1ff;
 //   margin: 0 auto;
 // }
 
+@import "animate.css";
+
 .navbar-item > .active {
   color: #e57373;
 }
@@ -28,7 +30,6 @@ $bg-white: #e6f1ff;
   flex-direction: column;
   // padding-top: 10px;
   user-select: none;
-
 }
 
 .wrapper {

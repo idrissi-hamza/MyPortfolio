@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Home.scss";
 import { useNavigate } from "react-router-dom";
 import Button from "@mui/material/Button";
@@ -6,18 +6,89 @@ import Button from "@mui/material/Button";
 import Circles from "../../components/Navbar/Circles";
 import { useContext } from "react";
 import { globalContext } from "../../Context";
+import AnimatedLetters from "../../components/AnimatedLetters";
 
 const Home = () => {
   let navigate = useNavigate();
   const context = useContext(globalContext);
   const { open } = context.state;
+  const [letterClass, setLetterClass] = useState("text-animate");
+  // const introArray = [
+  //   "H",
+  //   "i,",
+  //   "M",
+  //   "y",
+  //   " ",
+  //   "n",
+  //   "a",
+  //   "m",
+  //   "e",
+  //   " ",
+  //   "i",
+  //   "s",
+  //   ":",
+  // ];
+  const nameArray = [
+    "H",
+    "a",
+    "m",
+    "z",
+    "a",
+    " ",
+    "A",
+    ".",
+    "I",
+    "d",
+    "r",
+    "i",
+    "s",
+    "s",
+    "i",
+  ];
+  const jobArray = [
+    "F",
+    "r",
+    "o",
+    "n",
+    "t",
+    "e",
+    "n",
+    "d",
+    " ",
+    "d",
+    "e",
+    "v",
+    "l",
+    "o",
+    "p",
+    "e",
+    "r",
+  ];
   return (
-    <div className={`home ${open ? "background" : ""}`} onClick={() => context.dispatch({ type: "close" })}>
+    <div
+      className={`home ${open ? "background" : ""}`}
+      onClick={() => context.dispatch({ type: "close" })}
+    >
       <div className=" home-container wrapper ">
         <p>Hi, my name is :</p>
         <h1>
-          <span>Hamza A.Idrissi</span>
+          {/* <span>Hamza A.Idrissi</span> */}
+          <AnimatedLetters
+            letterClass="text-animate"
+            strArray={nameArray}
+            idx={10}
+          />
           <br />
+          <span className={`${letterClass} _24`}>I'</span>
+          <span className={`${letterClass} _25`}>m</span>
+          &nbsp;
+          <span className={`${letterClass} _26`}>a</span>
+          &nbsp;
+          <AnimatedLetters
+            letterClass={letterClass}
+            strArray={jobArray}
+            idx={27}
+          />
           I'm a Frontend developer
         </h1>
         <h3>
