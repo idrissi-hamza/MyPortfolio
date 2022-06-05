@@ -7,6 +7,7 @@ import Circles from "../../components/Navbar/Circles";
 import { useContext } from "react";
 import { globalContext } from "../../Context";
 import AnimatedLetters from "../../components/AnimatedLetters";
+import { useEffect } from "react";
 
 const Home = () => {
   let navigate = useNavigate();
@@ -64,6 +65,12 @@ const Home = () => {
     "e",
     "r",
   ];
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLetterClass("text-animate-hover");
+    }, 4000);
+    return () => clearTimeout(timer);
+  }, []);
   return (
     <div
       className={`home ${open ? "background" : ""}`}
@@ -74,7 +81,7 @@ const Home = () => {
         <h1>
           {/* <span>Hamza A.Idrissi</span> */}
           <AnimatedLetters
-            letterClass="text-animate"
+            letterClass={`${letterClass} name`}
             strArray={nameArray}
             idx={10}
           />
@@ -85,11 +92,11 @@ const Home = () => {
           <span className={`${letterClass} _26`}>a</span>
           &nbsp;
           <AnimatedLetters
-            letterClass={letterClass}
+            letterClass={`${letterClass} `}
             strArray={jobArray}
             idx={27}
           />
-          I'm a Frontend developer
+          {/* I'm a Frontend developer */}
         </h1>
         <h3>
           I build (and occasionally) design exceptional digital experiences.
