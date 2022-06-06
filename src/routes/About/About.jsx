@@ -11,7 +11,7 @@ const About = () => {
         I'm a frontend developer with a solid knowledge of the cutting-edge
         technologies used in the web developement.
         <br className="br" />
-        I'm a self-taugth developper, able to work independently &
+        I'm able to work independently &
         collaboratively in a team to deliver a great user experience and satisfy
         the needs of my clients.
         <br />

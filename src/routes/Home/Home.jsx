@@ -59,6 +59,7 @@ const Home = () => {
     "d",
     "e",
     "v",
+    "e",
     "l",
     "o",
     "p",
@@ -83,18 +84,18 @@ const Home = () => {
           <AnimatedLetters
             letterClass={`${letterClass} name`}
             strArray={nameArray}
-            idx={10}
+            idx={2}
           />
           <br />
-          <span className={`${letterClass} _24`}>I'</span>
-          <span className={`${letterClass} _25`}>m</span>
+          <span className={`${letterClass} _16`}>I'</span>
+          <span className={`${letterClass} _17`}>m</span>
           &nbsp;
-          <span className={`${letterClass} _26`}>a</span>
+          <span className={`${letterClass} _18`}>a</span>
           &nbsp;
           <AnimatedLetters
             letterClass={`${letterClass} `}
             strArray={jobArray}
-            idx={27}
+            idx={19}
           />
           {/* I'm a Frontend developer */}
         </h1>
