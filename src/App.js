@@ -15,7 +15,7 @@ function App() {
   // #374E59
   return (
     <div
-      className="app "
+      className="app  "
       style={{
         background: darkMode ? "#374E59" : "#e6f1ff",
         color: darkMode ? "#e6f1ff" : "#374E59",
@@ -24,10 +24,12 @@ function App() {
       {/* <div className="container"> */}
 
       <Navbar />
-      <Home />
-      <About />
-      <Portfolio />
-      <Contact />
+      <div className="wrapper container">
+        <Home />
+        <About />
+        <Portfolio />
+        <Contact />
+      </div>
     </div>
   );
 }

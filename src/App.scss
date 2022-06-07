@@ -38,4 +38,16 @@ $bg-white: #e6f1ff;
   max-width: 1024px;
 }
 
+.container {
+  width: fit-content;
+  max-width: 960px;
+  padding-right: 2rem;
+  padding-left: 5rem;
+}
 
+@media (max-width: 860px) {
+  .container {
+    padding: 0 2rem;
+    text-align: center;
+  }
+}

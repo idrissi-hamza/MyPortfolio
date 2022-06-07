@@ -4,11 +4,7 @@ $bubblewhite: rgba(255, 255, 255, 0.1);
 .home {
   padding: 24px 0;
   font-family: "nunito";
-  &-container {
-    width: fit-content;
-    max-width: 960px;
-    padding-inline: 2rem;
-  }
+ 
   p {
     font-size: 1rem;
   }
@@ -18,7 +14,7 @@ $bubblewhite: rgba(255, 255, 255, 0.1);
       display: inline-block;
       white-space: nowrap;
     }
-    z-index: 9999;
+    z-index: 9998;
     display: inline-block;
     position: relative;
     font-size: 4rem;
@@ -71,9 +67,4 @@ $bubblewhite: rgba(255, 255, 255, 0.1);
   }
 }
 
-@media (max-width: 810px) {
-  .home-container {
-    padding: 0 2rem;
-    text-align: center;
-  }
-}
+
