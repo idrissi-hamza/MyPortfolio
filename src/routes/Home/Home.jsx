@@ -14,58 +14,6 @@ const Home = () => {
   const context = useContext(globalContext);
   const { open } = context.state;
   const [letterClass, setLetterClass] = useState("text-animate");
-  // const introArray = [
-  //   "H",
-  //   "i,",
-  //   "M",
-  //   "y",
-  //   " ",
-  //   "n",
-  //   "a",
-  //   "m",
-  //   "e",
-  //   " ",
-  //   "i",
-  //   "s",
-  //   ":",
-  // ];
-  const nameArray = [
-    "H",
-    "a",
-    "m",
-    "z",
-    "a",
-    " ",
-    "A",
-    ".",
-    "I",
-    "d",
-    "r",
-    "i",
-    "s",
-    "s",
-    "i",
-  ];
-  const jobArray = [
-    "F",
-    "r",
-    "o",
-    "n",
-    "t",
-    "e",
-    "n",
-    "d",
-    " ",
-    "d",
-    "e",
-    "v",
-    "e",
-    "l",
-    "o",
-    "p",
-    "e",
-    "r",
-  ];
   useEffect(() => {
     const timer = setTimeout(() => {
       setLetterClass("text-animate-hover");
@@ -81,23 +29,40 @@ const Home = () => {
         <p>Hi, my name is :</p>
         <h1>
           {/* <span>Hamza A.Idrissi</span> */}
-          <AnimatedLetters
-            letterClass={`${letterClass} name`}
-            strArray={nameArray}
-            idx={2}
-          />
+          <div >
+            <AnimatedLetters
+              letterClass={`${letterClass} name`}
+              str="Hamza"
+              idx={2}
+            />
+          </div>
+          <div>
+            <AnimatedLetters
+              letterClass={`${letterClass} name`}
+              str="  A.Idrissi"
+              idx={6}
+            />
+          </div>
           <br />
           <span className={`${letterClass} _16`}>I'</span>
           <span className={`${letterClass} _17`}>m</span>
           &nbsp;
           <span className={`${letterClass} _18`}>a</span>
           &nbsp;
-          <AnimatedLetters
-            letterClass={`${letterClass} `}
-            strArray={jobArray}
-            idx={19}
-          />
-          {/* I'm a Frontend developer */}
+          <div>
+            <AnimatedLetters
+              letterClass={`${letterClass} `}
+              str="Frontend"
+              idx={19}
+            />
+          </div>
+          <div>
+            <AnimatedLetters
+              letterClass={`${letterClass} `}
+              str="  developer"
+              idx={26}
+            />
+          </div>
         </h1>
         <h3>
           I build (and occasionally) design exceptional digital experiences.

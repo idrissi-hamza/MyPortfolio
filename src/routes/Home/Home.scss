@@ -13,12 +13,18 @@ $bubblewhite: rgba(255, 255, 255, 0.1);
     font-size: 1rem;
   }
   h1 {
+    & div{
+      // background: #e57373;
+      display: inline-block;
+      white-space: nowrap;
+    }
     z-index: 9999;
     display: inline-block;
     position: relative;
     font-size: 4rem;
     font-weight: 700;
     span .name {
+      // white-space: nowrap;
       color: #8892b0;
       &:hover {
         // animation: rubberBand 1s;
@@ -62,5 +68,12 @@ $bubblewhite: rgba(255, 255, 255, 0.1);
     h3 {
       font-size: 1rem;
     }
+  }
+}
+
+@media (max-width: 810px) {
+  .home-container {
+    padding: 0 2rem;
+    text-align: center;
   }
 }
