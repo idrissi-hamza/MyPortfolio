@@ -1,13 +1,12 @@
 // import logo from "./logo.svg";
 import "./App.scss";
 import Navbar from "./components/Navbar/Navbar";
-import Portfolio from "./routes/Portfolio/Portfolio";
-import Home from "./routes/Home/Home";
-import Contact from "./routes/Contact/Contact";
-import About from "./routes/About/About";
+import Portfolio from "./components/Portfolio/Portfolio";
+import Home from "./components/Home/Home";
+import Contact from "./components/Contact/Contact";
+import About from "./components/About/About";
 import { useContext } from "react";
 import { globalContext } from "./Context";
-import { Route, Routes } from "react-router-dom";
 
 function App() {
   // background: ;
@@ -23,14 +22,12 @@ function App() {
       }}
     >
       {/* <div className="container"> */}
-      
+
       <Navbar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="about" element={<About />} />
-          <Route path="portfolio" element={<Portfolio />} />
-          <Route path="contact" element={<Contact />} />
-        </Routes>
+      <Home />
+      <About />
+      <Portfolio />
+      <Contact />
     </div>
   );
 }

@@ -1,5 +1,5 @@
 .about {
-  min-height: 100%;
+  min-height: 100vh;
   display: grid;
   grid-template-columns: 1fr 2.5fr;
   // gap: 3rem;
@@ -13,10 +13,7 @@
     font-family: "nunito";
     // background:#aaa;
   }
-  .img{
-    // background-color: #000;
-
-  }
+  
   & img {
     // margin: 2rem;
     background: #000; ;
