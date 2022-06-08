@@ -27,7 +27,7 @@ function App() {
       <div className="wrapper container">
         <Home />
         <About />
-        <Portfolio />
+        {/* <Portfolio /> */}
         <Contact />
       </div>
     </div>
