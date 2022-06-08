@@ -3,10 +3,10 @@ import "./Home.scss";
 import { useNavigate } from "react-router-dom";
 import Button from "@mui/material/Button";
 
-import Circles from "../Navbar/Circles";
+import Circles from "../../components/Navbar/Circles";
 import { useContext } from "react";
 import { globalContext } from "../../Context";
-import AnimatedLetters from "../AnimatedLetters";
+import AnimatedLetters from "../../components/AnimatedLetters";
 import { useEffect } from "react";
 
 const Home = () => {

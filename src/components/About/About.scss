@@ -1,26 +1,63 @@
 .about {
-  min-height: 100vh;
-  display: grid;
-  grid-template-columns: 1fr 2.5fr;
-  // gap: 3rem;
-  // padding: 1rem;
-  // margin-top: 1rem;
-  align-items: center;
+  min-height: 80vh;
+  margin-top: 10rem;
+  font-family: "nunito";
+  h2 {
+    font-family: "Hachi Maru Pop";
+  }
 
-
+  &__container {
+    display: flex;
+    align-items: center;
+    // background:#e573731a;
+    gap: 2rem;
+  }
   &__text {
     font-size: 1.2rem;
-    font-family: "nunito";
     // background:#aaa;
+    padding-right: 1rem;
+    text-align: left;
   }
-  
+
   & img {
-    // margin: 2rem;
-    background: #000; ;
+    // margin-left: -2rem;
+    background: #000;
     width: 90%;
-    border-radius: .5rem;
+    border-radius: 0.5rem;
+    filter: grayscale(10%);
   }
 }
-br{
+br {
   margin-bottom: 1rem;
+}
+
+@media (max-width: 860px) {
+  .about {
+    // max-width: 80vw;
+    &__container {
+      gap: 0.8rem;
+    }
+    &__text {
+      padding-inline: 1rem;
+    }
+  }
+}
+@media (max-width: 740px) {
+  .about {
+    &__container {
+      //  display: flex;
+      flex-direction: column-reverse;
+      // background: #000;
+    }
+    &__text {
+      padding-inline: 1rem;
+    }
+    & img {
+      // margin: 2rem;
+      // background: #000;
+      max-width: 16rem;
+      border-radius: 0.5rem;
+      margin-top: 1rem;
+    }
+  }
 }

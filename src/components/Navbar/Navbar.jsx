@@ -1,7 +1,7 @@
 import React from "react";
 import "./Navbar.scss";
 import Button from "@mui/material/Button";
-// import Toggle from "./Toggle";
+import Toggle from "./Toggle";
 import { useContext } from "react";
 import { globalContext } from "../../Context";
 import { NavLink } from "react-router-dom";
@@ -33,7 +33,7 @@ const Navbar = () => {
         {/* left */}
         <div className="navbar__left">
           <span className="navbar__logo">{"<H/A>"}</span>
-          {/* <Toggle /> */}
+          <Toggle />
         </div>
 
         {/* right */}
