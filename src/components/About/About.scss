@@ -1,5 +1,5 @@
 .about {
-  min-height: 80vh;
+  // min-height: 60vh;
   margin-top: 10rem;
   font-family: "nunito";
   h2 {
@@ -25,6 +25,21 @@
     width: 90%;
     border-radius: 0.5rem;
     filter: grayscale(10%);
+  }
+  &__list {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(140px, 200px));
+    gap: 0px 10px;
+    padding: 0px;
+    margin: 20px 0px 0px 20px;
+    // overflow: hidden;
+    list-style: none;
+    & li::before {
+      content: "▹";
+      color: #e57373;
+      line-height: 12px;
+    }
   }
 }
 br {
@@ -58,6 +73,11 @@ br {
       max-width: 16rem;
       border-radius: 0.5rem;
       margin-top: 1rem;
+    }
+    &__list {
+      // max-width: fit-content;
+      // margin-inline: auto;
+      margin-bottom: 30px;
     }
   }
 }
