@@ -1,0 +1,163 @@
+.card {
+  display: flex;
+  position: relative;
+  width: 35rem;
+  // height: 320px;
+  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.014),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.02), 0 12.5px 10px rgba(0, 0, 0, 0.025),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.03), 0 41.8px 33.4px rgba(0, 0, 0, 0.036),
+    0 100px 80px rgba(0, 0, 0, 0.05);
+
+  &--image {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &--info {
+    --size: 20px;
+    width: var(--size);
+    // height: var(--size);
+    aspect-ratio: 1.6;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 2px;
+    position: absolute;
+    transition: width 550ms ease, height 550ms ease, right 550ms ease,
+      background 550ms ease;
+    overflow: hidden;
+    box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.014),
+      0 6.7px 5.3px rgba(0, 0, 0, 0.02), 0 12.5px 10px rgba(0, 0, 0, 0.025),
+      0 22.3px 17.9px rgba(0, 0, 0, 0.03), 0 41.8px 33.4px rgba(0, 0, 0, 0.036),
+      0 100px 80px rgba(0, 0, 0, 0.05), 0 0px 2.2px rgba(0, 0, 0, 0.045),
+      0 0px 5.3px rgba(0, 0, 0, 0.065), 0 0px 10px rgba(0, 0, 0, 0.08),
+      0 0px 17.9px rgba(0, 0, 0, 0.095), 0 0px 33.4px rgba(0, 0, 0, 0.115),
+      0 0px 80px rgba(0, 0, 0, 0.16), 0 0.2px 2.2px rgba(0, 0, 0, 0.014),
+      0 0.6px 5.3px rgba(0, 0, 0, 0.02), 0 1.1px 10px rgba(0, 0, 0, 0.025),
+      0 2px 17.9px rgba(0, 0, 0, 0.03), 0 3.8px 33.4px rgba(0, 0, 0, 0.036),
+      0 9px 80px rgba(0, 0, 0, 0.05);
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.65) 0%,
+        rgba(0, 0, 0, 0.25) 50%,
+        transparent 100%
+      );
+      z-index: 1;
+      opacity: 0;
+      transition: opacity 550ms ease;
+    }
+
+    &.info--1 {
+      bottom: 47%;
+      right: 80%;
+      // height: 50%;
+      .info--image {
+        width: 100%;
+        height: 100%;
+
+        img {
+          top: 0%;
+          width: 100%;
+          left: 0%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+
+    &.info--2 {
+      bottom: 25%;
+      right: 15%;
+      .info--image {
+        width: 100%;
+        height: 100%;
+        img {
+          top: 0%;
+          width: 100%;
+          left: 0%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+
+    .info--text {
+      display: block;
+      position: absolute;
+      left: 10%;
+      bottom: 5%;
+      font-size: 0.55rem;
+      letter-spacing: 1px;
+      font-family: "Montserrat";
+      font-weight: bold;
+      color: #fff;
+      white-space: nowrap;
+      z-index: 2;
+      opacity: 0;
+      transform: translateY(25%);
+      transition: opacity 250ms ease, transform 250ms ease;
+    }
+
+    .info--image {
+      position: relative;
+      width: 50%;
+      height: 50%;
+      overflow: hidden;
+      img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0;
+        transition: opacity 550ms ease;
+      }
+    }
+  }
+
+  &:hover {
+    .card--info {
+      --size: 140px;
+      &::after {
+        opacity: 1;
+      }
+      &.info--1 {
+        right: 71%;
+        transition-delay: 100ms;
+      }
+      &.info--2 {
+        right: 5%;
+      }
+      .info--image {
+        width: 100%;
+        height: 100%;
+        // object-fit: cover;
+        img {
+          opacity: 1;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+      .info--text {
+        transition-delay: 550ms;
+        opacity: 1;
+        transform: translateY(0%);
+      }
+    }
+  }
+}
