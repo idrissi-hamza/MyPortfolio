@@ -1,35 +1,31 @@
 import React from "react";
 import "./ProjectCard.scss";
+import { FiGithub ,FiExternalLink} from "react-icons/fi";
 
-const ProjectCard = ({
-  projectImage,
-  info1,
-  infoImage1,
-  info2,
-  infoImage2,
-}) => {
+const ProjectCard = ({ projectImage }) => {
   return (
-    <div class="conainer">
-      <div class="card">
-        <div>
-          <div class="card--image">
-            <img src={projectImage} alt="image" />
-          </div>
-          <div class="card--info info--1">
-            <span class="info--text">{info1}</span>
-            <div class="info--image">
-              <img src={infoImage1} alt="info image 1" />
-            </div>
-          </div>
-          <div class="card--info info--2">
-            <span class="info--text">{info2}</span>
-            {/* <div class="icon"></div> */}
-            <div class="info--image">
-              <img src={infoImage2} alt="info image 2" />
-            </div>
-          </div>
+    <div className="card">
+      <div className="card--image">
+        <img src={projectImage} alt="image" />
+      </div>
+      <div className="card--text">
+        <div className="card--title">
+          <span> Featured Project</span>TheNext
         </div>
-        <div>text</div>
+        <div className="card--description">
+          TheNext is a planner that allows an authenticated user to add his
+          tasks and keep track of their progress, with a minimalist UI &
+          responsive design that gives a user a nice experience.
+          <br /> It's built with React & The styling is done with Tailwindcss.
+          Authentication & storage with Firebase.
+        </div>
+        <div className="card--tech">
+          &nbsp; React &nbsp; TailwindCss &nbsp; Firebase
+        </div>
+        <div className="card--links">
+          <FiExternalLink />
+          <FiGithub />
+        </div>
       </div>
     </div>
   );
