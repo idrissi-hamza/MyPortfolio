@@ -3,4 +3,22 @@
   margin-top: 10rem;
   margin-top: 10rem;
   font-family: "nunito";
+  &--projects {
+    // @media (max-width: 860px) {
+    //   margin-inline: 1vw;
+    // }
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    // background: #ff33;
+    list-style: none;
+    gap: 7rem;
+    & li {
+       min-width: 100%;
+      // background: #fdf3;
+      padding: 0px;
+      margin: 0 auto;
+    }
+  }
 }
+

@@ -6,13 +6,14 @@ const Portfolio = () => {
   return (
     <div className="portfolio wrapper">
       <h1 className="heading">Some Things I’ve Built</h1>
-      <ProjectCard
-        projectImage={"./thenext.PNG"}
-        info1="good"
-        infoImage1={"./tasks.PNG"}
-        info2="verygood"
-        infoImage2={"./signup.PNG"}
-      />
+      <ul className="portfolio--projects">
+        <li>
+          <ProjectCard projectImage={"./thenext.PNG"} />
+        </li>
+        <li>
+          <ProjectCard projectImage={"./thenext.PNG"} />
+        </li>
+      </ul>
     </div>
   );
 };

@@ -4,12 +4,16 @@ import { FiGithub ,FiExternalLink} from "react-icons/fi";
 
 const ProjectCard = ({ projectImage }) => {
   return (
+    
     <div className="card">
       <div className="card--image">
+      <div className="card--title sm">
+          <span> Featured Project</span>TheNext
+        </div>
         <img src={projectImage} alt="image" />
       </div>
       <div className="card--text">
-        <div className="card--title">
+        <div className="card--title lg">
           <span> Featured Project</span>TheNext
         </div>
         <div className="card--description">
