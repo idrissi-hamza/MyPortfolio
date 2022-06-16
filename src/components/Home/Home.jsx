@@ -88,7 +88,7 @@ const Home = () => {
           Contact me
         </Button>
       </div>
-      <Circles />
+      {/* <Circles /> */}
     </div>
   );
 };

@@ -7,6 +7,7 @@ import Contact from "./components/Contact/Contact";
 import About from "./components/About/About";
 import { useContext } from "react";
 import { globalContext } from "./Context";
+import Circles from "./components/Navbar/Circles";
 
 function App() {
   // background: ;
@@ -21,14 +22,13 @@ function App() {
         color: darkMode ? "#e6f1ff" : "#374E59",
       }}
     >
-      {/* <div className="container"> */}
-
       <Navbar />
       <div className="wrapper container">
         <Home />
         <About />
         <Portfolio />
         <Contact />
+        <Circles />
       </div>
     </div>
   );
