@@ -4,25 +4,41 @@
   margin-top: 10rem;
   font-family: "nunito";
   &--projects {
-    // @media (max-width: 860px) {
-    //   margin-inline: 1vw;
-    // }
     padding: 0;
     display: flex;
     flex-direction: column;
-    // background: #ff33;
     list-style: none;
     gap: 200px;
     @media (max-width: 860px) {
-      // margin-inline: 1vw;
       gap: 70px;
     }
     & li {
-       min-width: 100%;
-      // background: #fdf3;
+      min-width: 100%;
       padding: 0px;
       margin: 0 auto;
+      @media (min-width: 860px) {
+        &:nth-child(even) {
+          & .card {
+            display: flex;
+            flex-direction:row-reverse;
+            &--image{
+  
+            }
+  
+  
+            &--text {
+              // color: red;
+              // position: unset;
+              left: 0;
+              align-items: flex-start;
+  
+            }
+          }
+         
+        } 
+      }
+
+     
     }
   }
 }
-
