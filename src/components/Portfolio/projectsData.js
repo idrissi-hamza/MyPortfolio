@@ -18,7 +18,41 @@ export const projectsData = [
     tech: ["React", "TailwindCss", "Leaflet"],
   },
   {
-    title: "Maptivity",
+    title: "Project 3",
+    img: "./thenext.PNG",
+    description: [
+      " This project is a map where a user can pin a note or an activity",
+      "It's built with React, & Leaflet library.The styling is done with Tailwind CSS",
+    ],
+    tech: ["React", "TailwindCss", "Leaflet"],
+  },
+  {
+    title: "Project 4",
+    img: "./thenext.PNG",
+    description: [
+      " This project is a map where a user can pin a note or an activity",
+      "It's built with React, & Leaflet library.The styling is done with Tailwind CSS",
+    ],
+    tech: ["React", "TailwindCss", "Leaflet"],
+  },
+  {
+    title: "Project 5",
+    img: "./thenext.PNG",
+    description: [
+      " This project is a map where a user can pin a note or an activity",
+      "It's built with React, & Leaflet library.The styling is done with Tailwind CSS",
+    ],
+    tech: ["React", "TailwindCss", "Leaflet"],
+  },{
+    title: "Project 6",
+    img: "./thenext.PNG",
+    description: [
+      " This project is a map where a user can pin a note or an activity",
+      "It's built with React, & Leaflet library.The styling is done with Tailwind CSS",
+    ],
+    tech: ["React", "TailwindCss", "Leaflet"],
+  },{
+    title: "Project 7dddddddddddkkkkkkkkk",
     img: "./thenext.PNG",
     description: [
       " This project is a map where a user can pin a note or an activity",

@@ -9,7 +9,7 @@ const Portfolio = () => {
       <div className="portfolio wrapper">
         <h1 className="heading">Some Things I’ve Built</h1>
         <ul className="portfolio--projects">
-          {projectsData.map((project, i) => (
+          {projectsData.slice(0, 3).map((project, i) => (
             <li key={i}>
               <ProjectCard
                 projectImage={project.img}
@@ -20,9 +20,8 @@ const Portfolio = () => {
             </li>
           ))}
         </ul>
+        <Archived />
       </div>
-      <Archived/>
-
     </>
   );
 };

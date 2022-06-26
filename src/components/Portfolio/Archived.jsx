@@ -1,19 +1,21 @@
-import React from 'react'
+import React from "react";
+import ArchiveCard from "./ArchiveCard";
+import { projectsData } from "./projectsData";
 
 const Archived = () => {
-  const projectsData=["tttt","ttttcgxb","ginijgkg","ggggg"]
+ 
   return (
     <div className="archived wrapper ">
-    <h1 className="archived--title ">Other Noteworthy Projects</h1>
-    <ul className="archived--projects">
-      {projectsData.map((project,i) => (
-        <li key={i}>
-          {project}
+      <h1 className="archived--title ">Other Noteworthy Projects</h1>
+      <ul className="archived--projects">
+        {projectsData.slice(3).map((project,i) => (
+        <li className="archived--project" key={i}>
+         <ArchiveCard/>
         </li>
       ))}
-    </ul>
-  </div>
-  )
-}
+      </ul>
+    </div>
+  );
+};
 
-export default Archived
+export default Archived;
