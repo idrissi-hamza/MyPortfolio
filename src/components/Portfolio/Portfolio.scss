@@ -1,6 +1,6 @@
 .portfolio {
   min-height: 100vh;
-  margin-top: 10rem;
+
   margin-top: 10rem;
   font-family: "nunito";
   &--projects {
@@ -20,25 +20,32 @@
         &:nth-child(even) {
           & .card {
             display: flex;
-            flex-direction:row-reverse;
-            &--image{
-  
+            flex-direction: row-reverse;
+            &--image {
             }
-  
-  
+
             &--text {
               // color: red;
               // position: unset;
               left: 0;
               align-items: flex-start;
-  
             }
           }
-         
-        } 
+        }
       }
-
-     
     }
+  }
+}
+
+.archived {
+  font-family: "nunito";
+
+  margin-top: 6rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  &--title {
+    font-size: 32px;
   }
 }
