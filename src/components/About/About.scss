@@ -19,9 +19,9 @@
     padding-right: 1rem;
     text-align: left;
   }
-// & .img-container{
-// width: 3%;
-// }
+  // & .img-container{
+  // width: 3%;
+  // }
   & img {
     // margin-left: -2rem;
     background: #000;
@@ -30,9 +30,10 @@
     filter: grayscale(10%);
   }
   &__list {
-          // max-width: fit-content;
+    // max-width: fit-content;
 
     // position: relative;
+    position: relative;
     display: grid;
     grid-template-columns: repeat(2, minmax(140px, 200px));
     gap: 0px 10px;
@@ -44,6 +45,12 @@
       content: "▹";
       color: #e57373;
       line-height: 12px;
+    }
+    & .resume {
+      position: absolute;
+      right:90px;
+      // top: 20px;
+      bottom: 5px;
     }
   }
 }
@@ -87,7 +94,6 @@ br {
 }
 @media (max-width: 460px) {
   .about {
-    
     &__list {
       display: block;
       // margin-inline: auto;

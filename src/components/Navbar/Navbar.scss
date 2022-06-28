@@ -1,15 +1,18 @@
 $navy-clr-8: hsla(216, 65%, 11%, 0.8);
 $pink-clr: #e57373;
 $bg-white-8: #eeeeeecc;
-$clr:hsla(214, 100%, 95%, 0.9);
+$clr: hsla(214, 100%, 95%, 0.9);
 .navbar {
   // background: #eee;
-  
+  // max-width: 1024px;
+  // margin: 0 auto;
+  // display: flex;
+  // justify-content: space-between;
   &-sm {
     display: none;
     background: #000;
   }
-  padding-inline: 2rem;
+  padding-inline: 5rem;
   position: sticky;
   top: 0px;
   height: 4rem;
@@ -25,11 +28,10 @@ $clr:hsla(214, 100%, 95%, 0.9);
   }
   &__left {
     flex: 1;
+    display: flex;
     align-items: center;
     justify-content: left;
-    display: flex;
     position: relative;
-
   }
 
   &__logo {
@@ -55,7 +57,7 @@ $clr:hsla(214, 100%, 95%, 0.9);
       }
     }
     & a {
-       text-decoration: none;
+      text-decoration: none;
       color: inherit;
       transition: all 0.5s;
       position: relative;
@@ -126,8 +128,6 @@ $clr:hsla(214, 100%, 95%, 0.9);
     filter: blur(5px);
     z-index: 1;
   }
-
-  
 }
 
 @media (max-width: 480px) {

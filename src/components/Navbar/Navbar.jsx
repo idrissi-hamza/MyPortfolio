@@ -49,36 +49,14 @@ const Navbar = () => {
                 </NavLink>
               </li>
             ))}
-
-            <Button
-              sx={{
-                zIndex: "40",
-
-                color: "#e57373",
-                borderColor: "#e57373",
-                borderWidth: "1.4px",
-                ":hover": {
-                  color: "#e57373bb",
-                  borderColor: "#e57373bb",
-                  borderWidth: "1.4px",
-                  background: "#e5737313",
-                },
-              }}
-              variant="outlined"
-              onClick={() => console.log("clicked")}
-            >
-              Resume
-            </Button>
+         
           </ul>
         </nav>
         {open && (
-          <nav className={`navbar__right navbar-sm `}>
+          <nav className={`navbar__right navbar-sm`}>
             <ul className="navbar__list">
               {links.map((link, i) => (
-                <li
-                  key={i}
-                  onClick={() => context.dispatch({ type: "close" })}
-                >
+                <li key={i} onClick={() => context.dispatch({ type: "close" })}>
                   <NavLink
                     to={link.id}
                     className={({ isActive }) => (isActive ? "active" : "")}
@@ -87,25 +65,7 @@ const Navbar = () => {
                   </NavLink>
                 </li>
               ))}
-              <Button
-                sx={{
-                  zIndex: "40",
-
-                  color: "#e57373",
-                  borderColor: "#e57373",
-                  borderWidth: "1.4px",
-                  ":hover": {
-                    color: "#e57373bb",
-                    borderColor: "#e57373bb",
-                    borderWidth: "1.4px",
-                    background: "#e5737313",
-                  },
-                }}
-                variant="outlined"
-                onClick={() => context.dispatch({ type: "close" })}
-              >
-                Resume
-              </Button>
+              
             </ul>
           </nav>
         )}
