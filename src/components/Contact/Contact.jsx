@@ -1,4 +1,4 @@
-import React, { useContext, useRef, useState } from "react";
+import React, { useContext, useEffect, useRef, useState } from "react";
 import "./Contact.scss";
 import emailjs from "@emailjs/browser";
 import { globalContext } from "../../Context";
@@ -13,12 +13,21 @@ const Contact = () => {
   const [message, setMessage] = useState("");
 
   const [done, setDone] = useState(false);
+
+
   const sendEmail = (e) => {
     e.preventDefault();
 
     emailjs
       .sendForm(
-      
+        process.env.REACT_APP_SERVICEID,
+        process.env.REACT_APP_templateID,
+        form.current,
+        process.env.REACT_APP_publicKEY
+        
+
+
+
       )
       .then(
         (result) => {
@@ -54,7 +63,7 @@ const Contact = () => {
         <form ref={form} onSubmit={sendEmail}>
           <input
             type="text"
-            name="user_name"
+            name="from_name"
             className="user"
             placeholder="Name"
             value={name}
@@ -64,7 +73,7 @@ const Contact = () => {
           />
           <input
             type="email"
-            name="user_email"
+            name="from_email"
             className="user"
             placeholder="Email"
             value={email}
