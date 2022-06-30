@@ -45,6 +45,7 @@
   }
   &--title {
     font-size: 32px;
+    // font-family: "nunito";
   }
   &--projects {
     // margin: 1rem;
@@ -64,7 +65,5 @@
       grid-template-columns: repeat(1, minmax(0, 1fr));
     }
   }
-  &--project {
-    // background: #000;
-  }
+
 }

@@ -1,22 +1,35 @@
-.contact-form {
+.contact{
+  font-family: "nunito";
+  // margin-top: 4rem
+  &--title{
+font-size: 42px;
+  }
+  &--text{
+    max-width: 26rem;
+    font-size: 1.2rem;
+ 
+  }
+
+  &-form {
     /* padding: 0 rem 0 3rem; */
     display: flex;
-    height: 80vh;
+    height: 70vh;
+    // background: #000;
     margin-top: 4rem;
     /* scroll */
     padding-top: 3rem;
     padding-bottom: 3rem;
   }
-
-
-.c-right {
-  display: flex;
-  justify-content: center;
-  position: relative;
-  flex: 1;
-}
-
-.c-right > form {
+  
+  
+  .c-right {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    flex: 1;
+  }
+  
+  .c-right > form {
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -26,21 +39,19 @@
 .c-right .user {
   width: 20rem;
   height: 2rem;
-  padding: 0.3em;
+  padding: 0.3em .7em;
   outline: none;
-  border: 2px solid var(--orange);
+  border: 2px solid #e57373;
   border-radius: 8px;
   font-size: 16px;
+  background:#eee;
 }
 
 textarea {
   height: 4rem !important;
 }
 
-.c-blur1 {
-  top: 1rem;
-  left: 8rem;
-}
+
 
 @media screen and (max-width: 800px) {
   .contact-form {
@@ -52,4 +63,6 @@ textarea {
   .c-right .user {
     width: 16rem;
   }
+}
+
 }
