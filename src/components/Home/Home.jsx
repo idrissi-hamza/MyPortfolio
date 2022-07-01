@@ -22,9 +22,9 @@ const Home = () => {
   }, []);
   return (
     <div
-      className={`home ${open ? "background" : ""}` }
-      id="/"
-      onClick={() => context.dispatch({ type: "close" })}
+    className={`home ${open ? "background" : ""}` }
+    id="/"
+    onClick={() => context.dispatch({ type: "close" })}
     >
       <div className="">
         <p>Hi, my name is :</p>
@@ -90,7 +90,6 @@ const Home = () => {
         </Button>
         
       </div>
-      {/* <Circles /> */}
     </div>
   );
 };
