@@ -1,6 +1,6 @@
 .portfolio {
-  min-height: 100vh;
-  margin-top: 10rem;
+  // min-height: 100vh;
+  padding-top: 8rem;
   font-family: "nunito";
   &--projects {
     padding: 0;
@@ -34,12 +34,12 @@
 .archived {
   font-family: "nunito";
   // background-color: aqua;
-  margin-top: 4rem;
+  padding-top: 4rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 2rem;
+  // padding: 2rem;
   & * {
     padding: 0;
   }

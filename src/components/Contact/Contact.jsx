@@ -40,8 +40,8 @@ const Contact = () => {
   };
 
   return (
-    <div className="contact wrapper">
-      <div className="contact-form" id="contact">
+    <section className="contact wrapper" id="contact">
+      <div className="contact-form">
         {/* left side copy and paste from work section */}
         <div className="w-left">
           <div className="awesome">
@@ -110,7 +110,7 @@ const Contact = () => {
           </form>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -22,7 +22,8 @@ const Home = () => {
   }, []);
   return (
     <div
-      className={`home ${open ? "background" : ""}`}
+      className={`home ${open ? "background" : ""}` }
+      id="/"
       onClick={() => context.dispatch({ type: "close" })}
     >
       <div className="">

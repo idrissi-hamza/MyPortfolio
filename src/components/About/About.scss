@@ -1,6 +1,6 @@
 .about {
   // min-height: 60vh;
-  margin-top: 10rem;
+  padding-top: 8rem;
   font-family: "nunito";
   h2 {
     font-family: "Hachi Maru Pop";
@@ -46,12 +46,11 @@
       color: #e57373;
       line-height: 12px;
     }
-    & .resume {
-      position: absolute;
-      right:90px;
-      // top: 20px;
-      bottom: 5px;
-    }
+    &-container{
+      display:flex;
+      align-items: center;    }
+
+      // background-color: #000;
   }
 }
 br {
@@ -98,6 +97,14 @@ br {
       display: block;
       // margin-inline: auto;
       // margin-bottom: 30px;
+      &-container{
+        display:flex;
+        flex-direction: column;
+        // align-items: center;  
+        }
+  
+        // background-color: #000;
+    // }
     }
   }
 }

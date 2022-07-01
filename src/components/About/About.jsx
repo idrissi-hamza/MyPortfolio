@@ -5,7 +5,7 @@ import resume from "./resume.pdf";
 
 const About = () => {
   return (
-    <div className="about wrapper">
+    <div className="about wrapper " id="about">
       <h1 className="heading">About me</h1>
       <div className="about__container">
         <div className="img-container">
@@ -20,13 +20,15 @@ const About = () => {
           I have a good experience, working as a freelance on various projects.
           <br />
           Here are a few technologies I’ve been working with recently:
-          <ul className="about__list">
-            <li>JavaScript (ES6+) </li>
-            <li>TypeScript</li>
-            <li>React</li>
-            <li>GraphQl</li>
-            <li>Next.js</li>
-            <li>Tailwindcss</li>
+          <ul className="about__list-container">
+            <div className="about__list">
+              <li>TypeScript</li>
+              <li>React</li>
+              <li>GraphQl</li>
+              <li>Next.js</li>
+              <li>Tailwindcss</li>
+              <li>JavaScript (ES6+) </li>
+            </div>
             <a href={resume} target="_blank" download className="resume">
               <Button
                 sx={{

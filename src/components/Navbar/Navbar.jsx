@@ -4,8 +4,10 @@ import Button from "@mui/material/Button";
 import Toggle from "./Toggle";
 import { useContext } from "react";
 import { globalContext } from "../../Context";
-import { NavLink } from "react-router-dom";
+// import { NavLink } from "react-router-dom";
 import { MenuButton } from "./MenuButton";
+import { Link } from "react-scroll";
+import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
   const context = useContext(globalContext);
@@ -41,12 +43,15 @@ const Navbar = () => {
           <ul className="navbar__list">
             {links.map((link, i) => (
               <li key={i}>
-                <NavLink
+                <Link
                   to={link.id}
-                  className={({ isActive }) => (isActive ? "active" : "")}
+                  // className={({ isActive }) => (isActive ? "active" : "")}
+                  activeClass="active"
+                  smooth
+                  spy 
                 >
                   {link.label}
-                </NavLink>
+                </Link>
               </li>
             ))}
          
