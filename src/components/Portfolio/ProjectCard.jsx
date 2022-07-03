@@ -24,7 +24,7 @@ const ProjectCard = ({ projectImage, projectTitle, projectDescription,projectTec
         </div>
         <div className="card--tech">
         {projectTech.map((tech,i) => (
-            <div key={i}>{tech}</div>
+            <div className={tech} key={i}>{tech}</div>
           ))}
 
         </div>
