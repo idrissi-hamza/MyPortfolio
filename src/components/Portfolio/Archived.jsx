@@ -1,6 +1,7 @@
 import React from "react";
 import ArchiveCard from "./ArchiveCard";
 import { projectsData } from "./projectsData";
+import "./Archived.scss"
 
 const Archived = () => {
  
@@ -10,7 +11,7 @@ const Archived = () => {
       <ul className="archived--projects">
         {projectsData.slice(3).map((project,i) => (
         <li className="archived--project" key={i}>
-         <ArchiveCard/>
+         <ArchiveCard project={project}/>
         </li>
       ))}
       </ul>

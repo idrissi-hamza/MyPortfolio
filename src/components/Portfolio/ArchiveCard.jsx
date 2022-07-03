@@ -1,33 +1,50 @@
-import * as React from 'react';
-import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
-import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
-import Button from '@mui/material/Button';
-import Typography from '@mui/material/Typography';
+import * as React from "react";
 
-export default function ArchiveCard() {
+import { FiGithub, FiExternalLink } from "react-icons/fi";
+import { globalContext } from "../../Context";
+
+export default function ArchiveCard({ project }) {
+  const context = React.useContext(globalContext);
+  const darkMode = context.state.darkMode;
   return (
-    <Card sx={{ maxWidth: 345 }}>
-      <CardMedia
-        component="img"
-        height="140"
-        image="/thenext.PNG"
-        alt="green iguana"
-      />
-      <CardContent>
-        <Typography gutterBottom variant="h5" component="div">
-          Lizard
-        </Typography>
-        <Typography variant="body2" color="text.secondary">
-          Lizards are a widespread group of squamate reptiles, with over 6,000
-          species, ranging across all continents except Antarctica
-        </Typography>
-      </CardContent>
-      <CardActions>
-        <Button size="small">Share</Button>
-        <Button size="small">Learn More</Button>
-      </CardActions>
-    </Card>
+    <div>
+      <article class="card">
+        <div class="thumb">
+          <img src={project.img} />
+        </div>
+        <div
+          class="infos"
+          // style={{
+          //   background: darkMode ?  "#e6f1ff": "#374E59",
+          // }}
+        >
+          <h3 className="stacks">
+            {project.tech.map((tech, i) => (
+              <span className="stack" key={i}>{tech}</span>
+            ))}
+          </h3>
+          <h2 class="title ">
+            {project.title}
+
+            {/* <span class="flag"></span> */}
+          </h2>
+          <div className="links">
+            <FiExternalLink />
+            <FiGithub />
+          </div>
+          {/* <h3>description</h3> */}
+
+          <div class="line"></div>
+          <p class="txt">
+           {project.description}
+          </p>
+          {/* <h3 class="details">event details</h3> */}
+          {/* <div className="links">
+            <FiExternalLink />
+            <FiGithub />
+          </div> */}
+        </div>
+      </article>
+    </div>
   );
 }

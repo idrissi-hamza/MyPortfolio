@@ -1,5 +1,6 @@
 export const projectsData = [
   {
+    id:"1",
     title: "TheNext",
     img: "./thenext.PNG",
     description: [
@@ -9,6 +10,7 @@ export const projectsData = [
     tech: ["React", "TailwindCss", "Firebase"],
   },
   {
+    id:"2",
     title: "Maptivity",
     img: "./maptivity.PNG",
     description: [
@@ -18,6 +20,7 @@ export const projectsData = [
     tech: ["React", "TailwindCss", "Leaflet"],
   },
   {
+    id:"3",
     title: "Movex",
     img: "./movex.PNG",
     description: [
@@ -27,6 +30,7 @@ export const projectsData = [
     tech: ["Next.js", "TailwindCss", "TBMD API"],
   },
   {
+    id:"4",
     title: "Project 4",
     img: "./thenext.PNG",
     description: [
@@ -36,8 +40,9 @@ export const projectsData = [
     tech: ["React", "TailwindCss", "Leaflet"],
   },
   {
+    id:"5",
     title: "Project 5",
-    img: "./thenext.PNG",
+    img: "./maptivity.PNG",
     description: [
       " This project is a map where a user can pin a note or an activity",
       "It's built with React, & Leaflet library.The styling is done with Tailwind CSS",
@@ -45,21 +50,14 @@ export const projectsData = [
     tech: ["React", "TailwindCss", "Leaflet"],
   },
   {
-    title: "Project 6",
-    img: "./thenext.PNG",
+    id:"6",
+    title: "Project6",
+    img: "./movex.PNG",
     description: [
       " This project is a map where a user can pin a note or an activity",
       "It's built with React, & Leaflet library.The styling is done with Tailwind CSS",
     ],
     tech: ["React", "TailwindCss", "Leaflet"],
   },
-  {
-    title: "Project 7dddddddddddkkkkkkkkk",
-    img: "./thenext.PNG",
-    description: [
-      " This project is a map where a user can pin a note or an activity",
-      "It's built with React, & Leaflet library.The styling is done with Tailwind CSS",
-    ],
-    tech: ["React", "TailwindCss", "Leaflet"],
-  },
+  
 ];
