@@ -20,29 +20,23 @@ export default function ArchiveCard({ project }) {
         >
           <h3 className="stacks">
             {project.tech.map((tech, i) => (
-              <span className="stack" key={i}>{tech}</span>
+              <span className={` stack ${tech}`} key={i}>{tech}</span>
             ))}
           </h3>
           <h2 class="title ">
             {project.title}
 
-            {/* <span class="flag"></span> */}
           </h2>
           <div className="links">
             <FiExternalLink />
             <FiGithub />
           </div>
-          {/* <h3>description</h3> */}
 
           <div class="line"></div>
           <p class="txt">
            {project.description}
           </p>
-          {/* <h3 class="details">event details</h3> */}
-          {/* <div className="links">
-            <FiExternalLink />
-            <FiGithub />
-          </div> */}
+        
         </div>
       </article>
     </div>

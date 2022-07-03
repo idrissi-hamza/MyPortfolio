@@ -37,7 +37,7 @@ export const projectsData = [
       " This project is a map where a user can pin a note or an activity",
       "It's built with React, & Leaflet library.The styling is done with Tailwind CSS",
     ],
-    tech: ["React", "TailwindCss", "Leaflet"],
+    tech: ["React", "Nextjs", "Leaflet"],
   },
   {
     id:"5",
@@ -47,7 +47,7 @@ export const projectsData = [
       " This project is a map where a user can pin a note or an activity",
       "It's built with React, & Leaflet library.The styling is done with Tailwind CSS",
     ],
-    tech: ["React", "TailwindCss", "Leaflet"],
+    tech: ["React", "scss", "Leaflet"],
   },
   {
     id:"6",
@@ -57,7 +57,7 @@ export const projectsData = [
       " This project is a map where a user can pin a note or an activity",
       "It's built with React, & Leaflet library.The styling is done with Tailwind CSS",
     ],
-    tech: ["React", "TailwindCss", "Leaflet"],
+    tech: ["React", "TailwindCss", "firebase"],
   },
   
 ];
