@@ -11,16 +11,6 @@ export const projectsData = [
   },
   {
     id:"2",
-    title: "Maptivity",
-    img: "./maptivity.PNG",
-    description: [
-      " This project is a map where a user can pin a note or an activity",
-      "It's built with React, & Leaflet library.The styling is done with Tailwind CSS",
-    ],
-    tech: ["React", "TailwindCss", "Leaflet"],
-  },
-  {
-    id:"3",
     title: "Movex",
     img: "./movex.PNG",
     description: [
@@ -28,6 +18,16 @@ export const projectsData = [
       "It's built with React & Next.js, it connects to the TMDB API to display and search for movies. The styling is done with Tailwind CSS.",
     ],
     tech: ["Next.js", "TailwindCss", "TBMD API"],
+  },
+  {
+    id:"3",
+    title: "Maptivity",
+    img: "./maptivity.PNG",
+    description: [
+      " This project is a map where a user can pin a note or an activity",
+      "It's built with React, & Leaflet library.The styling is done with Tailwind CSS",
+    ],
+    tech: ["React", "TailwindCss", "Leaflet"],
   },
   {
     id:"4",

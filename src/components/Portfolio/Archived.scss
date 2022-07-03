@@ -111,21 +111,7 @@ $timing-2: 0.5s 0.25s;
   height: $height;
 }
 
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
 
-html,
-body {
-  font-size: 100%;
-}
-// body {
-//   padding: 0;
-//   margin: 0;
-//   background: $big-stone;
-// }
 
 a[href] {
   position: relative;
@@ -153,6 +139,10 @@ a[href] {
 }
 
 article.card {
+  * {
+    padding: 0;
+    margin: 0;
+  }
   font-family: "nunito";
   color: #374e59;
 
@@ -188,42 +178,30 @@ article.card {
       color: $lite-big-stone;
       display: flex;
       gap: 10px;
-      // #EADD86
-      // #AFEAE5
-      
-      // :nth-child(1) {
-      //   background: #bad5f5;
-      // }
-      // :nth-child(2) {
-      //   background: #f2c986;
-      // }
-      // :nth-child(3) {
-      //   background: #e1c1c1;
-      // }
 
-      .React{
+      .React {
         background: #c1d9f5;
       }
-      .TailwindCss{
+      .TailwindCss {
         background: #f3ddba;
       }
-      .Nextjs{
+      .Nextjs {
         background: #f5cccc;
       }
-      
-      .Leaflet{
+
+      .Leaflet {
         background: #c6f7f3;
       }
 
-      .firebase{
+      .firebase {
         background: #f5edba;
       }
-      .scss{
+      .scss {
         background: #eec8f5;
       }
     }
 
-    .stack{
+    .stack {
       display: inline-block;
       padding: 2px;
       border-radius: 3px;
@@ -239,11 +217,10 @@ article.card {
       text-shadow: 0 0 0px lighten($big-stone, 20);
     }
     .links {
-     
       font-size: 20px;
       display: flex;
       gap: 0.4rem;
-   
+
       & svg:hover {
         color: #e57373;
         // z-index: 9999;
