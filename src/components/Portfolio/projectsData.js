@@ -21,43 +21,44 @@ export const projectsData = [
   },
   {
     id:"3",
+    title: "projects managment",
+    img: "./nota.PNG",
+    description: [
+      " nota is an application that brings your team together to plan, track, and collaborate on any project — all in one place. ",
+      " you can create a project assign it to a specific team, collaborate via chat  option specific to each project, check the connected members of the team and much more features  ",
+      "It's built with React, firebse.The styling is done with Tailwind CSS",
+    ],
+    tech: ["React", "Firebase", "TailwindCss"],
+  },
+  {
+    id:"4",
     title: "Maptivity",
     img: "./maptivity.PNG",
     description: [
-      " This project is a map where a user can pin a note or an activity",
-      "It's built with React, & Leaflet library.The styling is done with Tailwind CSS",
+      " This project is a map where a user can pin a note or an activity. ",
+      "It's built with React, & Leaflet library. The styling is done with Tailwind CSS",
     ],
     tech: ["React", "TailwindCss", "Leaflet"],
   },
   {
-    id:"4",
-    title: "Project 4",
-    img: "./thenext.PNG",
-    description: [
-      " This project is a map where a user can pin a note or an activity",
-      "It's built with React, & Leaflet library.The styling is done with Tailwind CSS",
-    ],
-    tech: ["React", "Nextjs", "Leaflet"],
-  },
-  {
     id:"5",
-    title: "Project 5",
-    img: "./maptivity.PNG",
+    title: "expenses tracker",
+    img: "./expensy.PNG",
     description: [
-      " This project is a map where a user can pin a note or an activity",
-      "It's built with React, & Leaflet library.The styling is done with Tailwind CSS",
+      " This project is an application that allows an athenticated user to add  and keep track of his expenses. ",
+      "It's built with React, the authentication and storage is assured with firebase.The styling is done with TailwindCss",
     ],
-    tech: ["React", "scss", "Leaflet"],
+    tech: ["React",  "TailwindCss","Firebase"],
   },
   {
     id:"6",
-    title: "Project6",
-    img: "./movex.PNG",
+    title: "Pedopter",
+    img: "./pedopter.PNG",
     description: [
-      " This project is a map where a user can pin a note or an activity",
-      "It's built with React, & Leaflet library.The styling is done with Tailwind CSS",
+      " petdopter is an online, searchable database of animals who need homes. ",
+      "It's built with Next.js, & Strapi.The styling is done with Tailwind CSS",
     ],
-    tech: ["React", "TailwindCss", "firebase"],
+    tech: ["React", "TailwindCss", "Strapi"],
   },
   
 ];
