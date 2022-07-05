@@ -12,7 +12,7 @@ import Circles from "./components/Navbar/Circles";
 function App() {
   // background: ;
   const context = useContext(globalContext);
-  const darkMode = context.state.darkMode;
+  const {darkMode,open} = context.state;
   // #374E59
   return (
     <div
@@ -23,12 +23,13 @@ function App() {
       }}
     >
       <Navbar />
-      <div className="wrapper container">
+      <div className={`wrapper container ${open ? "background" : ""}` }>
+      
         <Home />
         <About />
         <Portfolio />
         <Contact />
-        {/* <Circles /> */}
+        <Circles />
       </div>
     </div>
   );

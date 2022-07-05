@@ -21,7 +21,7 @@ const Navbar = () => {
 
   return (
     <div
-      className="navbar   "
+      className="navbar "
       style={{
         background: darkMode
           ? "hsla(199, 24%, 28%, 0.9)"
@@ -30,51 +30,47 @@ const Navbar = () => {
       }}
     >
       <MenuButton />
+      {/* left */}
 
       <div className="navbar-container">
-        {/* left */}
-        <div className="navbar__left">
+        <div className={`navbar__left ${open ? "background" : ""}`}>
           <span className="navbar__logo">{"<H/A>"}</span>
           <Toggle />
         </div>
 
-        {/* right */}
-        <nav className={`navbar__right  navbar-lg `}>
-          <ul className="navbar__list">
-            {links.map((link, i) => (
-              <li key={i}>
-                <Link
-                  to={link.id}
-                  // className={({ isActive }) => (isActive ? "active" : "")}
-                  activeClass="active"
-                  smooth
-                  spy 
-                >
-                  {link.label}
-                </Link>
-              </li>
-            ))}
-         
-          </ul>
-        </nav>
-        {open && (
-          <nav className={`navbar__right navbar-sm`}>
+        {!open && (
+          <nav className={`navbar__right  navbar-lg `}>
             <ul className="navbar__list">
               {links.map((link, i) => (
-                <li key={i} onClick={() => context.dispatch({ type: "close" })}>
-                  <NavLink
+                <li key={i}>
+                  <Link
                     to={link.id}
-                    className={({ isActive }) => (isActive ? "active" : "")}
+                    // className={({ isActive }) => (isActive ? "active" : "")}
+                    activeClass="active"
+                    smooth
+                    spy
                   >
                     {link.label}
-                  </NavLink>
+                  </Link>
                 </li>
               ))}
-              
             </ul>
           </nav>
         )}
       </div>
+      {open && (
+        <nav className={`navbar__right navbar-sm`}>
+          <ul className="navbar__list">
+            {links.map((link, i) => (
+              <li key={i} onClick={() => context.dispatch({ type: "close" })}>
+                <Link to={link.id} activeClass="active" smooth spy>
+                  {link.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      )}
     </div>
   );
 };

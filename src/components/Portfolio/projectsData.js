@@ -21,7 +21,7 @@ export const projectsData = [
   },
   {
     id:"3",
-    title: "projects managment",
+    title: "nota",
     img: "./nota.PNG",
     description: [
       " nota is an application that brings your team together to plan, track, and collaborate on any project — all in one place. ",

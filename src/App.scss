@@ -63,3 +63,10 @@ $bg-white: #e6f1ff;
     background-color: #556f7b;
   }
 }
+
+.background {
+  filter: blur(10px);
+  z-index: 9;
+  // position: absolute;
+
+}
