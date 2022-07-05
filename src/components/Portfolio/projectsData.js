@@ -58,7 +58,7 @@ export const projectsData = [
       " petdopter is an online, searchable database of animals who need homes. ",
       "It's built with Next.js, & Strapi.The styling is done with Tailwind CSS",
     ],
-    tech: ["React", "TailwindCss", "Strapi"],
+    tech: ["Nextjs", "TailwindCss", "Strapi"],
   },
   
 ];

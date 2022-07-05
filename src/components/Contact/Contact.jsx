@@ -83,7 +83,6 @@ const Contact = () => {
                 setMessage(e.target.value);
               }}
             />
-            {/* <input type="submit" value="Send" className="button"/> */}
               <Button
                 // onClick={() => navigate("/contact")}
                 sx={{

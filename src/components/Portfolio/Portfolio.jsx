@@ -7,7 +7,7 @@ const Portfolio = () => {
   return (
     
       <section className="portfolio wrapper" id="portfolio">
-        <h1 className="heading">Some Things I’ve Built</h1>
+        <h1 className="heading">Projects</h1>
         <ul className="portfolio--projects">
           {projectsData.slice(0, 3).map((project, i) => (
             <li key={i}>
