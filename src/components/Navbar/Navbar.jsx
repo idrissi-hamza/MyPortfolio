@@ -38,8 +38,10 @@ const Navbar = () => {
           <Toggle />
         </div>
 
+{/* big screen navbar */}
+
         {!open && (
-          <nav className={`navbar__right  navbar-lg `}>
+          <nav className={`navbar__right  navbar-lg `} >
             <ul className="navbar__list">
               {links.map((link, i) => (
                 <li key={i}>
@@ -58,8 +60,15 @@ const Navbar = () => {
           </nav>
         )}
       </div>
+
+      {/* small screen navbar */}
       {open && (
-        <nav className={`navbar__right navbar-sm`}>
+        <nav className={`navbar__right navbar-sm`}  style={{
+          background: darkMode
+            ? "hsla(199, 24%, 28%, 0.9)"
+            : "hsla(214, 100%, 95%, 0.9)",
+          color: darkMode ? "#e6f1ff" : "#374E59",
+        }}>
           <ul className="navbar__list">
             {links.map((link, i) => (
               <li key={i} onClick={() => context.dispatch({ type: "close" })}>
