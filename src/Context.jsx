@@ -10,8 +10,8 @@ const globalReducer = (state, action) => {
       return { ...state, darkMode: !state.darkMode };
     case "menu":
       return { ...state, open: !state.open };
-    // case "close":
-    //   return { ...state, open: false};
+    case "close":
+      return { ...state, open: false};
     default:
       return state;
   }

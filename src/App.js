@@ -14,7 +14,7 @@ function App() {
   const context = useContext(globalContext);
   const { darkMode, open } = context.state;
   const clickHandler = () => {
-    context.dispatch({ type: "menu" });
+    context.dispatch({ type: "close" });
   };
 
   return (
