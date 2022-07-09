@@ -8,6 +8,7 @@ import { useContext } from "react";
 import { globalContext } from "../../Context";
 import AnimatedLetters from "../../components/AnimatedLetters";
 import { useEffect } from "react";
+import { Link } from "react-scroll";
 
 const Home = () => {
   let navigate = useNavigate();
@@ -22,15 +23,15 @@ const Home = () => {
   }, []);
   return (
     <div
-    className={`home ${open ? "background" : ""}` }
-    id="/"
-    onClick={() => context.dispatch({ type: "close" })}
+      className={`home ${open ? "background" : ""}`}
+      id="/"
+      onClick={() => context.dispatch({ type: "close" })}
     >
       <div className="">
         <p>Hi, my name is :</p>
         <h1>
           {/* <span>Hamza A.Idrissi</span> */}
-          <div >
+          <div>
             <AnimatedLetters
               letterClass={`${letterClass} name`}
               str="Hamza"
@@ -68,27 +69,27 @@ const Home = () => {
         <h3>
           I build (and occasionally) design exceptional digital experiences.
         </h3>
+        <Link to="contact" activeClass="active" smooth spy offset={50}>
+          <Button
+            onClick={() => navigate("/contact")}
+            sx={{
+              zIndex: "10",
 
-        <Button
-          onClick={() => navigate("/contact")}
-          sx={{
-            zIndex: "10",
-
-            color: "#e57373",
-            borderColor: "#e57373",
-            borderWidth: "1.4px",
-            ":hover": {
-              color: "#e57373bb",
-              borderColor: "#e57373bb",
+              color: "#e57373",
+              borderColor: "#e57373",
               borderWidth: "1.4px",
-              background: "#e5737313",
-            },
-          }}
-          variant="outlined"
-        >
-          Contact me
-        </Button>
-        
+              ":hover": {
+                color: "#e57373bb",
+                borderColor: "#e57373bb",
+                borderWidth: "1.4px",
+                background: "#e5737313",
+              },
+            }}
+            variant="outlined"
+          >
+            Contact me
+          </Button>
+        </Link>
       </div>
     </div>
   );
