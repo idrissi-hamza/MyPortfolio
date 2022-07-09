@@ -7,7 +7,7 @@ import { globalContext } from "../../Context";
 // import { NavLink } from "react-router-dom";
 import { MenuButton } from "./MenuButton";
 import { Link } from "react-scroll";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 
 const Navbar = () => {
   const context = useContext(globalContext);
@@ -21,6 +21,7 @@ const Navbar = () => {
   const clickHandler = () => {
     context.dispatch({ type: "menu" });
   };
+  const navigate = useNavigate();
   return (
     <div
       className="navbar "
@@ -48,8 +49,9 @@ const Navbar = () => {
               {links.map((link, i) => (
                 <li key={i}>
                   <Link
+                    onClick={() => navigate(`${link.id}`
+                    )}
                     to={link.id}
-                    // className={({ isActive }) => (isActive ? "active" : "")}
                     activeClass="active"
                     smooth
                     spy
@@ -77,8 +79,14 @@ const Navbar = () => {
         >
           <ul className="navbar__list">
             {links.map((link, i) => (
-              <li key={i} >
-                <Link onClick={clickHandler} to={link.id} activeClass="active" smooth spy>
+              <li key={i}>
+                <Link
+                  onClick={clickHandler}
+                  to={link.id}
+                  activeClass="active"
+                  smooth
+                  spy
+                >
                   {link.label}
                 </Link>
               </li>
