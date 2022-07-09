@@ -8,12 +8,12 @@ export default function ArchiveCard({ project }) {
   const darkMode = context.state.darkMode;
   return (
     <div>
-      <article class="card">
-        <div class="thumb">
+      <article className="card">
+        <div className="thumb">
           <img src={project.img} />
         </div>
         <div
-          class="infos"
+          className="infos"
           // style={{
           //   background: darkMode ?  "#e6f1ff": "#374E59",
           // }}
@@ -23,7 +23,7 @@ export default function ArchiveCard({ project }) {
               <span className={` stack ${tech}`} key={i}>{tech}</span>
             ))}
           </h3>
-          <h2 class="title ">
+          <h2 className="title ">
             {project.title}
 
           </h2>
@@ -32,8 +32,8 @@ export default function ArchiveCard({ project }) {
             <FiGithub />
           </div>
 
-          <div class="line"></div>
-          <p class="txt">
+          <div className="line"></div>
+          <p className="txt">
            {project.description}
           </p>
         
