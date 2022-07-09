@@ -18,7 +18,9 @@ const Navbar = () => {
     { label: "Portfolio", id: "portfolio" },
     { label: "Contact", id: "contact" },
   ];
-
+  const clickHandler = () => {
+    context.dispatch({ type: "menu" });
+  };
   return (
     <div
       className="navbar "
@@ -75,8 +77,8 @@ const Navbar = () => {
         >
           <ul className="navbar__list">
             {links.map((link, i) => (
-              <li key={i} onClick={() => context.dispatch({ type: "close" })}>
-                <Link to={link.id} activeClass="active" smooth spy>
+              <li key={i} >
+                <Link onClick={clickHandler} to={link.id} activeClass="active" smooth spy>
                   {link.label}
                 </Link>
               </li>

@@ -12,8 +12,11 @@ import Circles from "./components/Navbar/Circles";
 function App() {
   // background: ;
   const context = useContext(globalContext);
-  const {darkMode,open} = context.state;
-  // #374E59
+  const { darkMode, open } = context.state;
+  const clickHandler = () => {
+    context.dispatch({ type: "menu" });
+  };
+
   return (
     <div
       className="app  "
@@ -23,13 +26,14 @@ function App() {
       }}
     >
       <Navbar />
-      <div className={`wrapper container ${open ? "background" : ""}` }>
-      
-        <Home />
-        <About />
-        <Portfolio />
-        <Contact />
-        {/* <Circles /> */}
+      <div className={`wrapper container $`}>
+        <div className={` ${open ? "background" : ""}`} onClick={clickHandler}>
+          <Home />
+          <About />
+          <Portfolio />
+          <Contact />
+          {/* <Circles /> */}
+        </div>
       </div>
     </div>
   );
