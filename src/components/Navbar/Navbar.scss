@@ -14,7 +14,7 @@ $clr: hsla(214, 100%, 95%, 0.9);
   height: 4rem;
   justify-content: center;
   // margin-bottom: 10px;
-  z-index: 9999;
+  z-index: 999;
   padding-top: 10px;
   &-container {
     display: flex;
@@ -109,7 +109,7 @@ $clr: hsla(214, 100%, 95%, 0.9);
       padding-top: 60px;
 
       background: rgba(55, 78, 89, 0.9);
-      z-index: 30;
+      z-index: 999;
     }
     &__list {
       gap: 2rem;

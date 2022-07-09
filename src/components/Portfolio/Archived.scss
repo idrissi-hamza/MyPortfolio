@@ -1,5 +1,5 @@
 .archived {
-  z-index: 9999;
+  
   font-family: "nunito";
   // background-color: aqua;
   padding-top: 8rem;
@@ -49,24 +49,6 @@
   }
 }
 
-// #############################################################3
-// $host: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/397014/";
-
-// @font-face {
-//   font-family: "Grotesque";
-//   src: url("#{$host}BrandonGrotesque-Regular.eot"),
-//     url("#{$host}BrandonGrotesque-Regular.ttf"),
-//     url("#{$host}BrandonGrotesque-Regular.woff");
-//   font-weight: normal;
-// }
-
-// @font-face {
-//   font-family: "Grotesque Black";
-//   src: url("#{$host}BrandonGrotesque-Black.eot"),
-//     url("#{$host}BrandonGrotesque-Black.ttf"),
-//     url("#{$host}BrandonGrotesque-Black.woff");
-//   font-weight: bold;
-// }
 
 $big-stone: #152536;
 $white: #fff;
@@ -140,6 +122,8 @@ a[href] {
 }
 
 article.card {
+  position: relative;
+  z-index: 99;
   * {
     padding: 0;
     margin: 0;
@@ -148,7 +132,7 @@ article.card {
   font-family: "nunito";
   color: #374e59;
 
-  z-index: 9999;
+
   max-height: $card-height;
   max-width: 50px;
   border-radius: $border-radius;
@@ -249,18 +233,7 @@ article.card {
       opacity: 0;
       transition: $timing-2 $transition;
     }
-    // .details {
-    //   // @include pos(absolute, $left: 0, $bottom: 0);
-    //   margin: 10px 0;
-    //   // padding: 20px 24px;
-    //   letter-spacing: 1px;
-    //   color: $smalt-blue;
-    //   font-size: 0.9rem;
-    //   text-transform: uppercase;
-    //   cursor: pointer;
-    //   opacity: 0;
-    //   transition: $timing-2 $transition;
-    // }
+    
   }
   &:hover .infos {
     transform: translateY(-$thumb-height);

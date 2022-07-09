@@ -22,7 +22,7 @@ font-size: 42px;
     justify-content: center;
     position: relative;
     flex: 1;
-    z-index: 9999;
+    z-index: 99;
   }
   
   .c-right > form {
@@ -49,11 +49,13 @@ textarea {
 
 
 
-@media screen and (max-width: 800px) {
+@media(max-width: 800px) {
   .contact-form {
     padding: 0;
     flex-direction: column;
     gap: 5rem;
+    justify-content: center;
+    align-items: center;
   }
   .c-right .user {
     width: 16rem;
