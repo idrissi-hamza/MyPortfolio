@@ -32,7 +32,7 @@ function App() {
           <About />
           <Portfolio />
           <Contact />
-          {/* <Circles /> */}
+          <Circles />
         </div>
       </div>
     </div>
