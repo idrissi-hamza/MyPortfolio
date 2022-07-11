@@ -2,8 +2,6 @@ import React, { useState } from "react";
 import "./Home.scss";
 import { useNavigate } from "react-router-dom";
 import Button from "@mui/material/Button";
-
-import Circles from "../../components/Navbar/Circles";
 import { useContext } from "react";
 import { globalContext } from "../../Context";
 import AnimatedLetters from "../../components/AnimatedLetters";
@@ -21,6 +19,7 @@ const Home = () => {
     }, 4000);
     return () => clearTimeout(timer);
   }, []);
+
   return (
     <div
       className={`home ${open ? "background" : ""}`}
@@ -30,6 +29,7 @@ const Home = () => {
       <div className="">
         <p>Hi, my name is :</p>
         <h1>
+          
           {/* <span>Hamza A.Idrissi</span> */}
           <div>
             <AnimatedLetters
