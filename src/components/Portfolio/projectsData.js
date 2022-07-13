@@ -70,7 +70,8 @@ export const projectsData = [
     ],
     tech: ["Nextjs", "TailwindCss", "Strapi"],
     link:"",
-    github:"https://github.com/idrissi-hamza/petdopter"
+    github:"https://github.com/idrissi-hamza/petdopter",
+    status:"In development"
   },
   
 ];

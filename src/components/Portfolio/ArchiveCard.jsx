@@ -12,10 +12,7 @@ export default function ArchiveCard({ project }) {
         <div className="thumb">
           <img src={project.img} />
         </div>
-        <div
-          className="infos"
-         
-        >
+        <div className="infos">
           <h3 className="stacks">
             {project.tech.map((tech, i) => (
               <span className={` stack ${tech}`} key={i}>
@@ -23,7 +20,10 @@ export default function ArchiveCard({ project }) {
               </span>
             ))}
           </h3>
-          <h2 className="title ">{project.title}</h2>
+          <div className="title-container">
+            <h2 className="title ">{project.title} </h2>
+            <span>{project.status}</span>
+          </div>
           <div className="links">
             <a href={project.link} target="_blank">
               <FiExternalLink />
