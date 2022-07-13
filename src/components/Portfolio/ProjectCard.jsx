@@ -2,7 +2,14 @@ import React from "react";
 import "./ProjectCard.scss";
 import { FiGithub, FiExternalLink } from "react-icons/fi";
 
-const ProjectCard = ({ projectImage, projectTitle, projectDescription,projectTech }) => {
+const ProjectCard = ({
+  projectImage,
+  projectTitle,
+  projectDescription,
+  projectTech,
+  projectGithub,
+  projectLink,
+}) => {
   return (
     <div className="card">
       <div className="card--image">
@@ -18,19 +25,24 @@ const ProjectCard = ({ projectImage, projectTitle, projectDescription,projectTec
           {projectTitle}
         </div>
         <div className="card--description">
-          {projectDescription.map((paragraph,i) => (
+          {projectDescription.map((paragraph, i) => (
             <div key={i}>{paragraph}</div>
           ))}
         </div>
         <div className="card--tech">
-        {projectTech.map((tech,i) => (
-            <div className={tech} key={i}>{tech}</div>
+          {projectTech.map((tech, i) => (
+            <div className={tech} key={i}>
+              {tech}
+            </div>
           ))}
-
         </div>
         <div className="card--links">
-          <FiExternalLink />
-          <FiGithub />
+          <a href={projectLink} target="_blank">
+            <FiExternalLink />
+          </a>
+          <a href={projectGithub} target="_blank">
+            <FiGithub />
+          </a>
         </div>
       </div>
     </div>

@@ -5,7 +5,7 @@ import { globalContext } from "../../Context";
 
 export default function ArchiveCard({ project }) {
   const context = React.useContext(globalContext);
-  const darkMode = context.state.darkMode;
+  // const darkMode = context.state.darkMode;
   return (
     <div>
       <article className="card">
@@ -14,29 +14,27 @@ export default function ArchiveCard({ project }) {
         </div>
         <div
           className="infos"
-          // style={{
-          //   background: darkMode ?  "#e6f1ff": "#374E59",
-          // }}
+         
         >
           <h3 className="stacks">
             {project.tech.map((tech, i) => (
-              <span className={` stack ${tech}`} key={i}>{tech}</span>
+              <span className={` stack ${tech}`} key={i}>
+                {tech}
+              </span>
             ))}
           </h3>
-          <h2 className="title ">
-            {project.title}
-
-          </h2>
+          <h2 className="title ">{project.title}</h2>
           <div className="links">
-            <FiExternalLink />
-            <FiGithub />
+            <a href={project.link} target="_blank">
+              <FiExternalLink />
+            </a>
+            <a href={project.github} target="_blank">
+              <FiGithub />
+            </a>
           </div>
 
           <div className="line"></div>
-          <p className="txt">
-           {project.description}
-          </p>
-        
+          <p className="txt">{project.description}</p>
         </div>
       </article>
     </div>

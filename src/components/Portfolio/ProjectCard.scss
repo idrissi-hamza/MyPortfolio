@@ -79,6 +79,9 @@
     gap: 10px;
     margin-left: 24px;
     margin-bottom: 24px;
+    & a{
+      color: inherit;
+    }
     & svg:hover {
       color: #e57373;
       z-index: 990;

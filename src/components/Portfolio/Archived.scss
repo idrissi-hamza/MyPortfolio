@@ -171,6 +171,9 @@ article.card {
       display: flex;
       gap: 0.4rem;
 
+      & a{
+        color:inherit
+      }
       & svg:hover {
         color: #e57373;
         // z-index: 9999;
