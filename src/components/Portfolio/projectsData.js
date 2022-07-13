@@ -8,6 +8,8 @@ export const projectsData = [
       "It's built with React & The styling is done with Tailwindcss.Authentication & storage with Firebase.",
     ],
     tech: ["React", "TailwindCss", "Firebase"],
+    link:"https://the-next-plan.vercel.app",
+    github:"https://github.com/idrissi-hamza/TheNext"
   },
   {
     id:"2",
@@ -18,6 +20,8 @@ export const projectsData = [
       "It's built with React & Next.js, it connects to the TMDB API to display and search for movies. The styling is done with Tailwind CSS.",
     ],
     tech: ["Next.js", "TailwindCss", "TBMD API"],
+    link:"https://movex.vercel.app/",
+    github:"https://github.com/idrissi-hamza/movex"
   },
   {
     id:"3",
@@ -29,6 +33,8 @@ export const projectsData = [
       "It's built with React, firebse.The styling is done with Tailwind CSS",
     ],
     tech: ["React", "Firebase", "TailwindCss"],
+    link:"https://nova-eight.vercel.app/",
+    github:"https://github.com/idrissi-hamza/nova"
   },
   {
     id:"4",
@@ -39,6 +45,8 @@ export const projectsData = [
       "It's built with React, & Leaflet library. The styling is done with Tailwind CSS",
     ],
     tech: ["React", "TailwindCss", "Leaflet"],
+    link:"https://maptivity.vercel.app/",
+    github:"https://github.com/idrissi-hamza/Maptivity"
   },
   {
     id:"5",
@@ -49,6 +57,8 @@ export const projectsData = [
       "It's built with React, the authentication and storage is assured with firebase.The styling is done with TailwindCss",
     ],
     tech: ["React",  "TailwindCss","Firebase"],
+    link:"https://expensy-snowy.vercel.app/",
+    github:"https://github.com/idrissi-hamza/expensy"
   },
   {
     id:"6",
@@ -59,6 +69,8 @@ export const projectsData = [
       "It's built with Next.js, & Strapi.The styling is done with Tailwind CSS",
     ],
     tech: ["Nextjs", "TailwindCss", "Strapi"],
+    link:"",
+    github:"https://github.com/idrissi-hamza/petdopter"
   },
   
 ];
