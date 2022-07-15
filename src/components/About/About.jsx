@@ -29,7 +29,7 @@ const About = () => {
               <li>Tailwindcss</li>
               <li>JavaScript (ES6+) </li>
             </div>
-            <a href={resume} target="_blank" download >
+            {/* <a href={resume} target="_blank" download >
               <Button
                 sx={{
                   zIndex: "40",
@@ -48,7 +48,7 @@ const About = () => {
               >
                 Resume
               </Button>
-            </a>
+            </a> */}
           </ul>
         </div>
       </div>
